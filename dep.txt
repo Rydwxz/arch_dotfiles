@@ -1,0 +1,1 @@
+nvim.telescope relies on ripgrep
