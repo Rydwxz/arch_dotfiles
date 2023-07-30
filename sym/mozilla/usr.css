@@ -1,0 +1,53 @@
+html, html > *, html > * > *, .browser-toolbar  {
+  border: none !important;
+  -moz-appearance: none !important;
+  box-shadow: none !important;
+  background: transparent!important;
+}
+
+.titlebar-color, .browser-toolbar, findbar {
+  background: rgba(30, 30, 30, 0.55)!important;
+}
+
+.tab-line {
+  background: none !important;
+}
+
+.tab-background[selected=true] {
+  background: none !important;
+  border-style: solid !important;
+  border-width: 1px !important;
+  border-radius: 2px;
+  border-color: rgb(243 83 29 / 100%) !important;
+}
+
+tab[selected="true"]::after, .tabbrowser-tab[beforeselected-visible]::after {
+    opacity: 0 !important;
+}
+
+.tabbrowser-tab .tab-text {
+	color: rgb(243 83 29 / 100%) !important;
+}
+
+.tabbrowser-tab .tabs-newtab-button {
+	color: rgb(243 83 29 / 100%) !important;
+	border-style: solid !important;
+	border-width: 1px !important;
+}
+
+.tabbrowser-tab .tab-close-button {
+    color: rgb(243 83 29 / 100%) !important;
+}
+
+#urlbar-background{
+    background: none !important;
+	border-color: rgb(243 83 29 / 100%) !important;
+}
+
+#urlbar {
+    color: rgb(5 2420 53 / 100%) !important;
+}
+
+#navigator-toolbox {
+	--toolbarbutton-icon-fill: rgb(243 83 29 / 100%) !important;
+}
