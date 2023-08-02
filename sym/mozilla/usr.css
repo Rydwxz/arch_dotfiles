@@ -50,4 +50,9 @@ tab[selected="true"]::after, .tabbrowser-tab[beforeselected-visible]::after {
 
 #navigator-toolbox {
 	--toolbarbutton-icon-fill: rgb(243 83 29 / 100%) !important;
+	background: none !important;
+}
+
+#TabsToolbar {
+	background: none !important;
 }

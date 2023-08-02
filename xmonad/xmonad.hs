@@ -1,4 +1,5 @@
 import XMonad
+
 import XMonad.Layout.Hidden
 
 import XMonad.Layout.ThreeColumns
@@ -26,6 +27,11 @@ myConfig = def
  , normalBorderColor = "#7e1b44"
  , focusFollowsMouse = False
  }
+ `additionalKeysP`
+  [ ("M-c", kill)
+  , ("M-f", spawn "firefox")
+  , ("M-n", spawn "alacritty")
+  ]
 
 
 --layout
