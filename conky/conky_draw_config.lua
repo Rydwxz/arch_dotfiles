@@ -6,11 +6,11 @@
 elements = {
 	{
 	 kind = 'ring_graph',
-     center = {x = 50, y = 50},
+     center = {x = 30, y = 110},
      conky_value = 'cpu cpu1',
-     radius = 30,
+     radius = 25,
      graduated = true,
-     number_graduation=40,
+     number_graduation=24,
      angle_between_graduation=3,
      start_angle = 0,
      end_angle = 360,
