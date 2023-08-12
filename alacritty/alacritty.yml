@@ -7,7 +7,7 @@ scrolling:
 
 font:
   normal:
-    family: FiraMono Nerd Font
+    family: Fira Code
     style: Regular
   size: 13.0
 
@@ -21,23 +21,23 @@ colors:
   normal:
     black:   '#2c2525'
     red:     '#fd6883'
-    green:   '#adda78'
-    yellow:  '#f9cc6c'
-    blue:    '#f38d70'
-    magenta: '#a8a9eb'
-    cyan:    '#85dacc'
+    green:   '#98e464'
+    yellow:  '#fff242'
+    blue:    '#8162fe'
+    magenta: '#f1658d'
+    cyan:    '#2edbaa'
     white:   '#fff1f3'
 
   # Bright colors
   bright:
-    black:   '0x72696a'
-    red:     '0xfd6883'
-    green:   '0xadda78'
-    yellow:  '0xf9cc6c'
-    blue:    '0xf38d70'
-    magenta: '0xa8a9eb'
-    cyan:    '0x85dacc'
-    white:   '0xfff1f3'
+    black:   '#2c2525'
+    red:     '#fd3559'
+    green:   '#5eb820'
+    yellow:  '#d5c82a'
+    blue:    '#aa95fe'
+    magenta: '#c0204e'
+    cyan:    '#96edd4'
+    white:   '#fff1f3'
 
 draw_bold_text_with_bright_colors: true
 

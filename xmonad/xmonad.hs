@@ -1,21 +1,21 @@
 import XMonad
 
 import XMonad.Layout.Hidden
-
 import XMonad.Layout.ThreeColumns
-import XMonad.Hooks.EwmhDesktops
 
 import XMonad.Util.EZConfig
+import XMonad.Util.Loggers
+
+import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.StatusBar
 import XMonad.Hooks.StatusBar.PP
-import XMonad.Util.Loggers
 import XMonad.Hooks.ManageHelpers
 
 -- main config options
 main :: IO ()
 main = xmonad
-      . withEasySB (statusBarProp "xmobar" (pure myXmobarPP)) defToggleStrutsKey
+      . withEasySB (statusBarProp "stack exec xmobar" (pure myXmobarPP)) defToggleStrutsKey
       $ myConfig
 
 myConfig = def
@@ -51,7 +51,7 @@ myXmobarPP = def
     , ppCurrent         = wrap " " "" . xmobarBorder "Top" "#8be9fd" 2
     , ppHidden          = white . wrap " " ""
     , ppHiddenNoWindows = lowWhite . wrap " " ""
-    , ppUrgent          = red . wrap (yellow "!") (yellow "!")
+, ppUrgent          = red . wrap (yellow "!") (yellow "!")
     , ppOrder           = \[ws, l, _, wins] -> [ws, l, wins]
     , ppExtras          = [logTitles formatFocused formatUnfocused]
     }

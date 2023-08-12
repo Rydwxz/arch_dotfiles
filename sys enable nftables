@@ -1,0 +1,4 @@
+○ nftables.service - Netfilter Tables
+     Loaded: loaded (]8;;file://i7desk/usr/lib/systemd/system/nftables.service/usr/lib/systemd/system/nftables.service]8;;; [0;1;38;5;185mdisabled[0m; preset: [0;1;38;5;185mdisabled[0m)
+     Active: inactive (dead)
+       Docs: ]8;;man:nft(8)man:nft(8)]8;;
