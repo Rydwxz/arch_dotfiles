@@ -1,0 +1,10 @@
+# ~/.config/xmonad/build
+#!/bin/zsh
+exec stack-2.11.1 ghc -- \
+  --make xmonad.hs \
+  -i \
+  -ilib \
+  -fforce-recomp \
+  -main-is main \
+  -v0 \
+  -o "$1"

@@ -38,6 +38,7 @@ fi
 
 xcompmgr &
 feh --bg-fill ~/.fehbg &
+xmobar -x 1 &
 alacritty &
 
 exec xmonad

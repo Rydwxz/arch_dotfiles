@@ -45,7 +45,7 @@ source "/usr/lib/spaceship-prompt/spaceship.zsh"
 # Env Vars
 export EDITOR="nvim"
 export BROWSER="firefox"
-export PATH="${PATH}:${HOME}/lib:${HOME}/.local/bin"
+export PATH="${PATH}:${HOME}/lib:${HOME}/.ghcup/bin:${HOME}/.local/bin"
 
 # Aliases
 alias -g v="nvim"
@@ -61,6 +61,7 @@ alias -g kmon="kmon --color 00dd85 --accent-color ff4444 "
 alias -g gscr="gscreenshot"
 alias -g xp="xplr"
 alias -g kym="cd ~/prj/qmk/keyboards/v4/ansi/keymaps/wiz && v keymap.c"
+alias -g stack="stack-2.11.1"
 
 eval $(thefuck --alias fk)
 
