@@ -13,12 +13,15 @@ set $left h
 set $down j
 set $up k
 set $right l
+
+
 # Your preferred terminal emulator
 set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 set $menu dmenu_path | wmenu | xargs swaymsg exec --
+
 
 ### Output configuration
 #
@@ -27,7 +30,23 @@ output * bg /home/rw/.config/bg fill
 #
 # Example configuration:
 #
-#   output HDMI-A-1 resolution 1920x1080 position 1920,0
+output HDMI-A-1 {
+    mode 3440x1440@50Hz
+    position 0,1080
+}
+
+output DP-1 {
+    mode 1920x1080@60Hz
+    position 960,0
+}
+
+
+default_border pixel
+
+client.focused          #4c7899 #285577 #ffffff #2e9ef4   #ff1616
+client.unfocused        #333333 #222222 #888888 #292d2e   #7e1b44
+client.urgent        #333333 #222222 #888888 #292d2e   #4ddd86
+
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
@@ -201,15 +220,21 @@ bindsym $mod+r mode "resize"
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    position top
+    position bottom
+    output DP-1
+    tray_output DP-1
+
+    font ShureTechMono Nerd Font
+
+    workspace_buttons no
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
+    status_command while date +'%I:%M %a %b %d'; do sleep 1; done
 
     colors {
-        statusline #ffffff
-        background #323232
+        statusline #f9bdf3
+        background #1f041e
         inactive_workspace #32323200 #32323200 #5c5c5c
     }
 }
