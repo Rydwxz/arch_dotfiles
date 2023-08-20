@@ -1,0 +1,129 @@
+{
+    // "layer": "top", // Waybar at top layer
+     "output": "DP-1",
+     "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 30,
+    // "width": 1280, // Waybar width
+    "spacing": 8, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "modules-left": ["custom/cpupad", "cpu", "memory", "disk", "network"],
+    "modules-center": ["custom/msg"],
+    "modules-right": ["tray", "mpd", "clock"],
+    // Modules configuration
+    // "sway/workspaces": {
+    //     "disable-scroll": true,
+    //     "all-outputs": true,
+    //     "warp-on-scroll": false,
+    //     "format": "{name}: {icon}",
+    //     "format-icons": {
+    //         "1": "",
+    //         "2": "",
+    //         "3": "",
+    //         "4": "",
+    //         "5": "",
+    //         "urgent": "",
+    //         "focused": "",
+    //         "default": ""
+    //     }
+    // },
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "sway/scratchpad": {
+        "format": "{icon} {count}",
+        "show-empty": false,
+        "format-icons": ["", ""],
+        "tooltip": true,
+        "tooltip-format": "{app}: {title}"
+    },
+    "mpd": {
+        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
+        "format-disconnected": "Disconnected ",
+        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+        "unknown-tag": "N/A",
+        "interval": 2,
+        "consume-icons": {
+            "on": " "
+        },
+        "random-icons": {
+            "off": "<span color=\"#f53c3c\"></span> ",
+            "on": " "
+        },
+        "repeat-icons": {
+            "on": " "
+        },
+        "single-icons": {
+            "on": "1 "
+        },
+        "state-icons": {
+            "paused": "",
+            "playing": ""
+        },
+        "tooltip-format": "MPD (connected)",
+        "tooltip-format-disconnected": "MPD (disconnected)"
+    },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+    "clock": {
+        "format": "{:%a %b %d  %I:%M }",
+        // "timezone": "America/New_York",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "cpu": {
+        "format": "{icon0}{icon1}{icon2}{icon3}{icon4}{icon5}{icon6}{icon7}{icon8}{icon9}{icon10}{icon11}",
+        "tooltip": false,
+        "format-icons": [
+                        "⠀",
+                        "<span color='#4ddd86'>⡀</span>",
+                        "<span color='#4ddd86'>⣀</span>",
+                        "<span color='#4ddd86'>⣄</span>",
+                        "<span color='#4ddd86'>⣤</span>",
+                        "<span color='#ffff71'>⣦</span>",
+                        "<span color='#ffff71'>⣶</span>",
+                        "<span color='#f41f5c'>⣷</span>",
+                        "<span color='#f41f5c'>⣿</span>",
+                        ],
+    },
+    "disk": {
+        "format": "   {used}{percentage_used}%",
+        "path": "/",
+        "tooltip": false,
+    },
+    "memory": {
+        "format": "   {used}{percentage}%{swapUsed}",
+        "tooltip": false,
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "    󰬧 {bandwidthDownBytes} 󰬭 {bandwidthUpBytes}({signalStrength}%) ",
+        "format-ethernet": "  󰌘  󰬧 {bandwidthDownBytes} 󰬭 {bandwidthUpBytes}",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "custom/cpupad": {
+        "format": "  ",
+        "tooltip": false,
+    },
+    "custom/msg": {
+        "exec": "~/.config/waybar/dyn_msg/msg.sh",
+        "format": "   {}",
+        "restart-interval": 3,
+    },
+    "custom/media": {
+        "format": "{icon} {}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜"
+        },
+        "escape": true,
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    }
+}
