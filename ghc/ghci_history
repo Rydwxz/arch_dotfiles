@@ -1,0 +1,40 @@
+max' [1,2,3,4,5,6,7,8,5,4,3]
+max'
+:l prime
+:l prime
+maxx [1,2,3,4,5,6,3,4,8,2,3]
+:l prime
+rmvFst [1]
+rmvFst [1,2,3]
+:l prime
+primMinInt
+:t rem
+:t divides
+:t ld
+:t prime
+:t leastDivisor
+prime 9
+prime 7
+:l prime
+:r prime
+prime 7
+prime 8
+prime 2
+prime2
+prime 4
+:l prime
+:l prime
+prime
+:l prime
+:l prime
+quit
+exit
+ld k n =
+ld k n = | divides k n = k | k^2 > n = n | otherwise = ld (k + 1) n
+leastDivisor n = ldf 2 n
+3 `divides` 12
+divides 3 12
+divides 12 3
+divides d n = rem n d == 0
+rem 12 4
+rem 12 5

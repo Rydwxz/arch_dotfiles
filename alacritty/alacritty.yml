@@ -19,11 +19,11 @@ colors:
 
   # Normal colors
   normal:
-    black:   '#b7a8ac'
+    black:   '#403538'
     red:     '#ff2449'
     green:   '#4ddd86'
     yellow:  '#ffff71'
-    blue:    '#ad81fe'
+    blue:    '#8a56ec'
     magenta: '#f95c9e'
     cyan:    '#96edd4'
     white:   '#fff1f3'

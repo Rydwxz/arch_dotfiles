@@ -61,6 +61,7 @@ alias -g kmon="kmon --color 00dd85 --accent-color ff4444 "
 alias -g xp="xplr"
 alias -g kym="cd ~/prj/qmk/keyboards/v4/ansi/keymaps/wiz && v keymap.c"
 alias -g stack="stack-2.11.1"
+alias -g nt="pwd | alacritty &"
 
 eval $(thefuck --alias fk)
 
