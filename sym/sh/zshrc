@@ -62,6 +62,7 @@ alias -g xp="xplr"
 alias -g kym="cd ~/prj/qmk/keyboards/v4/ansi/keymaps/wiz && v keymap.c"
 alias -g stack="stack-2.11.1"
 alias -g nt="pwd | alacritty &"
+alias -g sshi_="ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev//null"
 
 eval $(thefuck --alias fk)
 

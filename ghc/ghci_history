@@ -1,40 +1,100 @@
-max' [1,2,3,4,5,6,7,8,5,4,3]
-max'
+logEqv2 phi1 form3
+logEqv2 phi1 psi1
+logEqv phi1 psi1
+:l prime
+myfunc [a,b,c] [1,2,3]
+:l prime
+:l prime'
+contr2 (\_ _ -> False)
+:l prime
+contr1 (\_ -> False)
+:l prime
+logEqv1 (\p -> p && not p) (\_ -> False)
+|logEqv1 (\p -> p && not p) (\_ -> False)
+logEqv1 (\p -> excludedMiddle p) (\p -> True)
+--logEqv1 (\p -> excludedMiddle p) (\p -> True)
+logEqv1 (\p -> p || False) (\p -> p)
+logEqv1 (\p -> p && True) (\p -> p)
+logEqv1 (\p -> p || True) (\p -> True)
+logEqv1 (\p -> p ==> False) (\p -> not p)
+logEqv1 (\_ -> not True) (\_ -> False)
+logEqv1 (\_ -> not True) False
+false'
+false' = not True
+:t form5
+:t valid2
+valid2 form5
+:l prime
+logEqv2 form3 form4
+valid2 form4
+valid2 form3
+valid form4
+:l prime
+valid2 form2
+valid2 form1
+:l prime
+valid1 excludedMiddle
+:l prime
+blowup "pie"
+:l prime
+xor False False
+xor 
+xor False True
+xor True False
+xor True True
 :l prime
 :l prime
-maxx [1,2,3,4,5,6,3,4,8,2,3]
 :l prime
-rmvFst [1]
-rmvFst [1,2,3]
+take 5000 primes0
+take 5000 primes1
 :l prime
-primMinInt
-:t rem
-:t divides
-:t ld
-:t prime
-:t leastDivisor
-prime 9
-prime 7
+take 5000 primes0
+take 5000 primes1
 :l prime
-:r prime
-prime 7
-prime 8
-prime 2
-prime2
-prime 4
+take 5000 primes1
+take 5000 primes0
+take 5000 filter primes0
+take 5000 primes1
+:l prime
+leastDivisorP 2923
+leastDivisorP 3923
+leastDivisorP 3920
+:t leastDivisorP
+srtString "Cameron Collard"
+take 4 primes0
+srtString "cameron collard"
+:l prime
+take 190 allPrimes 
+take 90 allPrimes 
+take 50 allPrimes 
+leastDivisorP 563
+leastDivisorP 565
+leastDivisorP 567
+leastDivisorP 568
+leastDivisorP 569
+leastDivisorP 560
+sumLengths [[1,2],[]]
+take 3 allPrimes
+:l prime
+take 4 allPrimes
+maxx [1,2,3]
+:l prime
+gg
+toys
+toys = "in the attic"
+1 + 2
+wtf
+take 5 allPrimes
 :l prime
 :l prime
-prime
+factors 12
+factors 12
+take 4 allPrimes
+leastDivisor 12
+leastDivisor 12
+leastDivisor12
 :l prime
+leastDivisor 12
 :l prime
-quit
-exit
-ld k n =
-ld k n = | divides k n = k | k^2 > n = n | otherwise = ld (k + 1) n
-leastDivisor n = ldf 2 n
-3 `divides` 12
-divides 3 12
-divides 12 3
-divides d n = rem n d == 0
-rem 12 4
-rem 12 5
+leastDivisor 12
+leastDivisor 1234

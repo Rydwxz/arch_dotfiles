@@ -14,11 +14,12 @@ set $down j
 set $up k
 set $right l
 
+seat * hide_cursor 500
 
-
-client.focused          #4c7899 #285577 #ffffff #2e9ef4   #ff1616
-client.unfocused        #333333 #222222 #888888 #292d2e   #7e1b44
-client.urgent        #333333 #222222 #888888 #292d2e   #90cda8
+client.focused          #ff1616 #00000082 #ffb7f8 #2e9ef4   #ff1616
+client.focused_inactive #7e1b44 #00000082 #ffb7f8 #c70046   #7e1b44
+client.unfocused        #7e1b44 #00000082 #ffb7f8 #292d2e   #7e1b44
+client.urgent           #333333 #222222 #e8e8e8 #292d2e   #90cda8
 
 
 ### Idle configuration
