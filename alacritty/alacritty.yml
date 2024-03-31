@@ -1,6 +1,6 @@
 # Rydwxz default
 window:
-  opacity: 0.75
+  opacity: 0.85
 
 scrolling:
   history: 5000
@@ -25,7 +25,7 @@ colors:
     red:     '#ff2449'
     green:   '#4ddd86'
     yellow:  '#ffff71'
-    blue:    '#8a56ec'
+    blue:    '#635af2'
     magenta: '#f95c9e'
     cyan:    '#96edd4'
     white:   '#fff1f3'
