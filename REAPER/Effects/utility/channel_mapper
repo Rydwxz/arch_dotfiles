@@ -18,24 +18,25 @@ gfx_ext_retina == 0 ? gfx_ext_retina=1;
 ui_open=0;
 act=0; // activity monitor
 ext_noinit=1;
-links=0;
+max_nch = <? printf("%d",nch); ?>;
 
 chmenu=1024;
 i=0; ch=2; dch=2;
-while (ch <= 64) (
+while (ch <= max_nch) (
   chmenu[i]=ch;
-  ch == 16 ? dch=4 : ch == 24 ? dch=8 : ch == 32 ? dch=16;
+  ch == 16 ? dch=4 : ch == 24 ? dch=8 : ch == 32 ? dch=16 : ch == 64 ? dch = 32;
   ch += dch;
   i += 1;
 );
- ch=16;
-while (ch <= 64) (
+ch=16;
+while (ch <= max_nch) (
   chmenu[i]=ch;
-  ch == 32 || ch == 48 ? ( i += 1; chmenu[i]=ch; );
+  (ch>16 && !(ch&15) && ch < max_nch) ? ( i += 1; chmenu[i]=ch; );
   ch += 2;
   i += 1;
 );
 chmenu_len=i;
+linkbuf = chmenu + chmenu_len;
 
 // using _var for audio thread state
 // unrolling for efficiency
@@ -83,7 +84,7 @@ ui_open ? (
 
 @serialize
 
-file_var(0, links);
+file_mem(0, linkbuf, ceil(max_nch/64));
 
 
 @gfx 240 280
@@ -179,16 +180,27 @@ loop(nj+1,
   j += 1;
 );
 
-mask=(1<<min(nch,32))-1;
-mask2 = nch > 32 ? (1<<min(nch-32,32))-1 : 0;
+function mask(n) ( n>=32 ? 0xffffffff : ((1<<n)-1) );
+
 i=si;
 loop(ni,
-  map=get_pin_mapping(1,i,0,mask);
-  map2 = nch > 32 ? get_pin_mapping(1,i,32,mask2) : 0;
+  <?
+    loop(i=0; nch/32,
+      printf("map%d=nch > %d ? get_pin_mapping(1,i,%d,mask(nch-%d)) : 0;\n",i,i*32,i*32,i*32);
+      i+=1;
+    );
+  ?>
   x=ox+(i-si)*sz;
   j=sj;
   loop(nj,
-    m = j < 32 ? map : map2;
+    m = <?
+      loop(i=0; nch/32 - 1,
+        printf("j < %d ? map%d : ",32+i*32,i);
+        i+=1;
+      );
+      printf("map%d\n",i);
+    ?>;
+  
     m&(1<<(j&31)) ? (
       y=oy+(j-sj)*sz;
       gfx_rect(x+sc+1,y+sc+1,sz-(2*sc+1),sz-(2*sc+1));
@@ -206,7 +218,18 @@ loop(ni,
     j += 1;
   );
   (flags&6) ? (
-    map&(map-1) || map2&(map2-1) || (map && map2) ? (
+    <?
+      loop(i=0; nch/32,
+        printf("(map%d & (map%d - 1)) ||",i,i);
+        i+=1;
+      );
+      printf(" (");
+      loop(i=0; nch/32,
+        printf("+ !!map%d",i);
+        i+=1;
+      );
+      printf(") > 1 ?");
+    ?>(
       #str = (flags&6) == 2 ? "-3.0" : "-6.0";
       draw_str(x+0.5*sz,0.5*sz,#str,6,257);
     );
@@ -254,6 +277,9 @@ function draw_radio(tx ty te ts)
   draw_str(tx+1.5*bsz,ty,ts,1,260);
 );
 
+function is_link(h) ( (linkbuf[h>>5] & (1<<(h&31)))!=0 );
+function tog_link(h) local(mask) ( mask = 1<<(h&31); ((linkbuf[h>>5] ~= mask) & mask)!=0; );
+
 function draw_slider(ti)
 (
   tti=si+ti;
@@ -265,7 +291,7 @@ function draw_slider(ti)
   gfx_rect(x-sc,fy,2*sc,fh);
   gfx_rect(x-0.3125*sz,fy+fh-vy-0.25*sz,0.625*sz,0.25*sz);
 
-  has_link=(links&(1<<(tti/2)));
+  has_link=is_link(tti/2);
   has_link ? (
     (tti&1) && ti == 0 ? (
       gfx_rect(x-0.625*sz,fy+fh-vy-0.25*sz,0.375*sz,0.25*sz);
@@ -356,7 +382,7 @@ function hit_box(tx ty)
       mouse_y >= oy && mouse_y < oy+nj*sz ? (
         i=floor((mouse_x-ox)/sz);
         j=floor((mouse_y-oy)/sz);
-        j32 = sj+j < 32 ? 0 : 32;
+        j32 = (sj+j)&0xffe0;
         m=get_pin_mapping(1,si+i,j32,-1);
         b=1<<(sj+j-j32);
         mouse_cap&4 ? m=b : m ~= b;
@@ -379,8 +405,7 @@ function hit_box(tx ty)
           i |= 0;
           i >= si && i < si+ni-1 && !(i&1) ? (
             i /= 2;
-            links=links~(1<<i);
-            (links&(1<<i)) ? (
+            tog_link(i) ? (
               slider(2*i+2)=slider(2*i+1);
               slider_automate(2^(2*i+1));
             );
@@ -396,15 +421,15 @@ function hit_box(tx ty)
       );
     ) :
     (do_reset = hit_button(rx,ry,btw,bth)) || hit_button(zx,zy,btw,bth) ? (
-      mask=1<<min(nch,32)-1;
-      mask2 = nch >= 32 ? 1<<(nch-32)-1 : 0;
       i=0;
-      loop(64,
-        i < nch ? (
-          set_pin_mapping(1,i,0,mask,0);
-          mask2 ? set_pin_mapping(1,i,32,mask2,0);
+      loop(max_nch,
+        i < nch ? ( <? loop(i=0; nch/32,
+            printf("nch > %d ? set_pin_mapping(1,i,%d,mask(nch-%d),0);\n",i*32,i*32,i*32);
+            i+=1;
+          ); 
+          ?> 
         );
-        do_reset ? set_pin_mapping(1,i,i&32,-1,1<<(i&31));
+        do_reset ? set_pin_mapping(1,i,i&0xffe0,-1,1<<(i&31));
         slider(i+1)=1;
         i += 1;
       );
@@ -412,21 +437,13 @@ function hit_box(tx ty)
     hit_button(nx,ny,btw,bth) ? (
       gfx_x=nx-0.5*btw;
       gfx_y=ny+0.5*bth;
-      #menu="";
-      i=0;
-      while (i < chmenu_len) (
-        i > 0 ? strcat(#menu,"|");
-        i == 13 || i == 22 || i == 31 ? (
-          i == 13 ? strcat(#menu,"|");
-          sprintf(#str,">%d-%d|",chmenu[i],chmenu[i]+16);
-          strcat(#menu,#str);
-        ) :
-        i == 21 || i == 30 ? (
-          strcat(#menu,"<");
+      loop(i=0; chmenu_len,
+        i > 0 ? (
+          strcat(#menu,i+1 >= chmenu_len || chmenu[i+1] == chmenu[i] ? "|<":"|");
+          chmenu[i] <= chmenu[i-1] ? sprintf(#menu,"%s%s>%d-%d|",#menu,
+                chmenu[i] < chmenu[i-1] ? "|" : "",chmenu[i],chmenu[i]+16);
         );
-        chmenu[i] == nch ? strcat(#menu,"!");
-        sprintf(#str,"%d",chmenu[i]);
-        strcat(#menu,#str);
+        sprintf(#menu,"%s%s%d",i?#menu:"",chmenu[i] == nch?"!":"",chmenu[i]);
         i += 1;
       );
       menusel=gfx_showmenu(#menu)-1;
@@ -459,7 +476,7 @@ function hit_box(tx ty)
   abs(v-0.5) < 1.5/fh ? v=0.5;
   slider(i+1)=v;
   slider_automate(2^i);
-  (links&(1<<(i/2))) ? (
+  is_link(i/2) ? (
     j = !(i&1) ? i+1 : i-1;
     slider(j+1)=v;
     slider_automate(2^j);
@@ -480,7 +497,7 @@ mouse_wheel ? (
       v < 0 ? v=0 : v > 1 ? v=1;
       slider(i+1)=v;
       slider_automate(2^i);
-      (links&(1<<(i/2))) ? (
+      is_link(i/2) ? (
         j = !(i&1) ? i+1 : i-1;
         slider(j+1)=v;
         slider_automate(2^j);

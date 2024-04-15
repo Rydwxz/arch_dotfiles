@@ -30,6 +30,7 @@ out_pin:right output
 
 @init
 ext_tail_size=-1;
+ext_gr_meter = 0;
 HOLDTIME = srate/128;
 
 r1Timer = 0;
@@ -94,6 +95,9 @@ spl1*=gainO;
 g_meter = min(g_meter,g_meterO);
 
 g_meter < gr_meter ? gr_meter=g_meter : ( gr_meter*=gr_meter_decay; gr_meter>1?gr_meter=1; );
+
+@block
+ext_gr_meter = gr_meter > 0 ? log(gr_meter) * (20/log(10)) : -150;
 
 @gfx 0 32 // request horizontal/vertical heights (0 means dont care)
 

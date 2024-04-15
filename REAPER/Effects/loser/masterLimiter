@@ -23,7 +23,7 @@ slider3:100<0,1000,1>Attack (és)
 slider4:0<0,10,.1>Hold (ms)
 slider5:250<0,1000,1>Release (ms)
 slider6:-.1<-6,0,.01>Limit (dB)
-slider7:0,Reduction
+slider7:0<-20,0,1>,Reduction
 
 in_pin:left input
 in_pin:right input
@@ -32,6 +32,7 @@ out_pin:right output
 
 @init
 ext_tail_size=-1;
+ext_gr_meter = 0;
 gain = seekgain = 1;
 c_ampdB = 8.65617025;
 
@@ -85,6 +86,6 @@ max(abs(spl0),abs(spl1)) > limit ? gain = seekgain; // Uber Nifty Metering For T
 spl0 = max(min(spl0,limit),-limit);
 spl1 = max(min(spl1,limit),-limit); 
 
-slider7 = log(gain)*c_ampdB;
+ext_gr_meter = slider7 = log(gain)*c_ampdB;
 sliderchange(64);
 

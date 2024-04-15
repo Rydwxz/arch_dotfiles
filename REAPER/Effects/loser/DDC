@@ -41,6 +41,7 @@ out_pin:right output
 ext_tail_size=-1;
 gain = seekgain = 1;
 c_ampdB = 8.65617025;
+ext_gr_meter = 0;
 
 @slider
 treshdB = min(slider1,-.1);
@@ -106,6 +107,6 @@ gain > seekgain ? gain=max(gain/attack,seekgain):gain=min(gain*release,seekgain)
 spl0_out = (spl0 *= gain * volume) ;
 spl1_out = (spl1 *= gain * volume) ;
 
-slider10 = log(gain)*c_ampdB;
+ext_gr_meter = slider10 = log(gain)*c_ampdB;
 sliderchange(512);
 

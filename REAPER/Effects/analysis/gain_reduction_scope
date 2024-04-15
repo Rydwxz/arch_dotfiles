@@ -290,7 +290,7 @@ need_view_update || view_meter_range != view_meter_range_last || view_maxdb != v
   gfx_rectto(gfx_w,gfx_h);
 
 
-  scope_h = ((gfx_h-gfx_texth*2-6-4)*0.5)|0;
+  scope_h = max(((gfx_h-gfx_texth*2-6-4)*0.5)|0,1);
   scope_ycent = gfx_h - scope_h*1.5 - gfx_texth - 4;
 
   // draw meter scale

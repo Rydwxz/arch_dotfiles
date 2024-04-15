@@ -1,13 +1,7 @@
-dotacat -S 19 -F 0.07 -p 3.5 << "EOF"
-:::::::::  :::   ::: :::::::::  :::       ::: :::    ::: :::::::::
-:+:    :+: :+:   :+: :+:    :+: :+:       :+: :+:    :+:      :+:
-+:+    +:+  +:+ +:+  +:+    +:+ +:+       +:+  +:+  +:+      +:+
-+#++:++#:    +#++:   +#+    +:+ +#+  +:+  +#+   +#++:+      +#+
-+#+    +#+    +#+    +#+    +#+ +#+ +#+#+ +#+  +#+  +#+    +#+
-#+#    #+#    #+#    #+#    #+#  #+#+# #+#+#  #+#    #+#  #+#
-###    ###    ###    #########    ###   ###   ###    ### #########
-EOF
+NF=$(neofetch)
+echo $NF | dotacat -S 24 -F 0.05 -p 3.0
 
+#
 # The following lines were added by compinstall
 
 zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
@@ -45,7 +39,7 @@ source "/usr/lib/spaceship-prompt/spaceship.zsh"
 # Env Vars
 export EDITOR="nvim"
 export BROWSER="firefox"
-export PATH="${PATH}:${HOME}/lib:${HOME}/.ghcup/bin:${HOME}/.local/bin:${HOME}/usr"
+export PATH="${PATH}:${HOME}/bin:${HOME}/.ghcup/bin:${HOME}/.local/bin:${HOME}/usr"
 
 # Aliases
 alias -g v="nvim"
@@ -61,7 +55,7 @@ alias -g kym="cd ~/prj/qmk/keyboards/v4/ansi/keymaps/wiz && v keymap.c"
 alias -g stack="stack-2.11.1"
 alias -g nt="pwd | alacritty &"
 alias -g sshi_="ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev//null"
-alias -g reaper="wine ~/.wine/drive_c/REAPER/reaper.exe"
+alias -g wreaper="wine ~/.wine/drive_c/REAPER/reaper.exe"
 
 eval $(thefuck --alias fk)
 
@@ -84,3 +78,13 @@ alias -s bash=nvim
 alias -s css=nvim
 
 alias -s pdf=firefox
+
+autoload -U add-zsh-hook
+
+ls_after_cd() {
+	exa
+}
+
+add-zsh-hook chpwd ls_after_cd
+
+NETHACKOPTIONS=@/home/rw/.config/nethack

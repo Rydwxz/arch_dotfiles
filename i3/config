@@ -11,9 +11,10 @@
 
 set $mod Mod4
 
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+font pango:Fire Code Mono 8
 
 client.focused          #ff1616 #00000082 #ffb7f8 #c80000   #ff1616
 client.focused_inactive #7e1b44 #00000082 #ffb7f8 #c70046   #7e1b44
@@ -21,6 +22,7 @@ client.unfocused        #7e1b44 #00000082 #ffb7f8 #292d2e   #7e1b44
 client.urgent           #333333 #222222 #e8e8e8 #292d2e   #90cda8
 
 default_border pixel 2
+focus_follows_mouse no
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -38,12 +40,13 @@ tiling_drag modifier titlebar
 
 # start a terminal
 bindsym $mod+Return exec alacritty
+bindsym $mod+Ctrl+Return exec kitty
 
 # kill focused window
 bindsym $mod+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+o exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -84,12 +87,12 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
+#bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+#bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
@@ -152,16 +155,16 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym j resize shrink width 3 px or 3 ppt
+        bindsym k resize grow height 3 px or 3 ppt
+        bindsym l resize shrink height 3 px or 3 ppt
+        bindsym semicolon resize grow width 3 px or 3 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Left resize shrink width 3 px or 3 ppt
+        bindsym Down resize grow height 3 px or 3 ppt
+        bindsym Up resize shrink height 3 px or 3 ppt
+        bindsym Right resize grow width 3 px or 3 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -176,3 +179,22 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+# custom mode for screen grabbing/clipping: how to auto-exit?
+mode "screenshot" {
+
+bindsym j  exec --no-startup-id maim -sD | xclip -selection clipboard -t image/png
+bindsym m exec --no-startup-id maim -sD ~/scrnsht.png
+
+bindsym k  exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
+bindsym comma  exec --no-startup-id maim --window $(xdotool getactivewindow) ~/scrnsht.png
+
+bindsym l exec --no-startup-id maim | xclip -selection clipboard -t image/png
+bindsym period exec --no-startup-id maim ~/scrnsht.png
+
+bindsym Escape mode "default"
+bindsym Return mode "default"
+
+}
+
+bindsym $mod+p mode "screenshot"

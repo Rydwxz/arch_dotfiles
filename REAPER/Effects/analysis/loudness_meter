@@ -491,6 +491,7 @@ yu=gfx_texth*7/8;
 want_vu = gfx_h > yu*7;
 want_axis = gfx_h > yu*10 && gfx_w > xu*14;
 want_capt = gfx_h > yu*4;
+want_max = gfx_h > yu*3;
 
 nch = cfg_mono ? 1 : max(num_ch,2);
 
@@ -681,8 +682,10 @@ want_lufs_s ? (
       set_alert_color(db,LUFS_COLOR);
       gfx_rect(x-colw/4,y0-scale_db1(db)*vh,colw/2,rsz);
     );
-    set_text_alert_color(db);
-    draw_str(format_dbv(db),x,yhi,5);
+    want_max ? (
+      set_text_alert_color(db);
+      draw_str(format_dbv(db),x,yhi,5);
+    );
   );
   x -= colw;
 );
@@ -710,8 +713,10 @@ want_lufs_m ? (
       set_alert_color(db,LUFS_COLOR);
       gfx_rect(x-colw/4,y0-scale_db1(db)*vh,colw/2,rsz);
     );
-    set_text_alert_color(db);
-    draw_str(format_dbv(db),x,yhi,5);
+    want_max ? (
+      set_text_alert_color(db);
+      draw_str(format_dbv(db),x,yhi,5);
+    );
   );
   cfg_lufs_m == 2 && want_vu && db_hist_max > 0 ? (
     set_color(LUFS_HIST_COLOR);
@@ -780,8 +785,10 @@ want_rms_m ? (
       set_color(RMS_COLOR);
       gfx_rect(x-colw/4,y0-scale_db1(db)*vh,colw/2,rsz);
     );
-    set_color(TEXT_COLOR);
-    draw_str(format_dbv(db),x,yhi,5);
+    want_max ? (
+      set_color(TEXT_COLOR);
+      draw_str(format_dbv(db),x,yhi,5);
+    );
   );
   x -= colw;
 );
@@ -819,8 +826,10 @@ want_peak ? (
         set_color(hv > 1 ? PEAK_CLIP_COLOR : PEAK_COLOR);
         gfx_rect(x-colw/4,y0-vh*scale_v(hv),colw/2,rsz);
       );
-      set_color(!want_vu && hv > 1 ? PEAK_CLIP_COLOR : TEXT_COLOR);
-      draw_str(format_db(hv),x,yhi,5)
+      want_max ? (
+        set_color(!want_vu && hv > 1 ? PEAK_CLIP_COLOR : TEXT_COLOR);
+        draw_str(format_db(hv),x,yhi,5)
+      );
     );
     x -= colw;
     ch -= 1;

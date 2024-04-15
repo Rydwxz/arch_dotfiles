@@ -43,6 +43,7 @@ out_pin:right output
 
 @init
   ext_tail_size = -1;
+  ext_gr_meter = 0;
   log2db = 8.6858896380650365530225783783321; // 20 / ln(10)
   db2log = 0.11512925464970228420089957273422; // ln(10) / 20 
   i=0;
@@ -135,7 +136,7 @@ out_pin:right output
   );
   slider7 = cratio;
   
-  gr = -overdb * (cratio-1)/cratio;
+  ext_gr_meter = gr = -overdb * (cratio-1)/cratio;
   slider8 = -gr;
   grv = exp(gr * db2log);
   

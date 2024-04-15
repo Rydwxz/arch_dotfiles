@@ -1,0 +1,89 @@
+NF=$(neofetch)
+RW=":::::::::  :::   ::: :::::::::  :::       ::: :::    ::: :::::::::
+:+:    :+: :+:   :+: :+:    :+: :+:       :+: :+:    :+:      :+:
++:+    +:+  +:+ +:+  +:+    +:+ +:+       +:+  +:+  +:+      +:+
++#++:++#:    +#++:   +#+    +:+ +#+  +:+  +#+   +#++:+      +#+
++#+    +#+    +#+    +#+    +#+ +#+ +#+#+ +#+  +#+  +#+    +#+
+#+#    #+#    #+#    #+#    #+#  #+#+# #+#+#  #+#    #+#  #+#
+###    ###    ###    #########    ###   ###   ###    ### #########"
+
+echo "$RW\n\n$NF" | dotacat -S 37 -F 0.04 -p 3.0
+#exec neofetch | dotacat -S 19 -F 0.07 -p 3.0
+
+#
+# The following lines were added by compinstall
+
+zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
+
+# The following lines were added by compinstall
+
+zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
+zstyle ':completion:*' completions 1
+zstyle ':completion:*' glob 1
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' insert-unambiguous false
+zstyle ':completion:*' list-colors ''
+zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
+zstyle ':completion:*' max-errors 2
+zstyle ':completion:*' menu select=2
+zstyle ':completion:*' original true
+zstyle ':completion:*' prompt ':=?'
+zstyle ':completion:*' select-prompt %S...%p%s
+zstyle ':completion:*' substitute 1
+zstyle ':completion:*' verbose true
+zstyle :compinstall filename '/home/rw/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+setopt autocd
+bindkey -v
+# End of lines configured by zsh-newuser-install
+
+source "/usr/lib/spaceship-prompt/spaceship.zsh"
+# Env Vars
+export EDITOR="nvim"
+export BROWSER="firefox"
+export PATH="${PATH}:${HOME}/lib:${HOME}/.ghcup/bin:${HOME}/.local/bin:${HOME}/usr"
+
+# Aliases
+alias -g v="nvim"
+alias -g nv="alacritty -e v . &"
+alias -g sv="sudo -E nvim"
+alias -g py="python"
+alias -g pyi="python -m pyinstaller"
+alias -g mix="ncpamixer"
+alias -g ex="exa -la"
+alias -g sp="sudo pacman"
+alias -g sys="systemctl"
+alias -g kym="cd ~/prj/qmk/keyboards/v4/ansi/keymaps/wiz && v keymap.c"
+alias -g stack="stack-2.11.1"
+alias -g nt="pwd | alacritty &"
+alias -g sshi_="ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev//null"
+alias -g reaper="wine ~/.wine/drive_c/REAPER/reaper.exe"
+
+eval $(thefuck --alias fk)
+
+# File Extension Association
+alias -s txt=nvim
+alias -s c=nvim
+alias -s cpp=nvim
+alias -s rs=nvim
+alias -s toml=nvim
+alias -s conf=nvim
+alias -s lua=nvim
+alias -s json=nvim
+alias -s h=nvim
+alias -s hs=nvim
+alias -s py=nvim
+alias -s yml=nvim
+alias -s yaml=nvim
+alias -s zsh=nvim
+alias -s bash=nvim
+alias -s css=nvim
+
+alias -s pdf=firefox

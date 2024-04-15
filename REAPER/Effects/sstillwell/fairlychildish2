@@ -299,6 +299,7 @@ out_pin:right output
     rgrv = exp(rgr * db2log);
   
   );
+  ext_gr_meter = lgr;
 
   agc == leftright ? (
     spl0 *= lgrv * lmakeupv;

@@ -56,6 +56,7 @@ out_pin:right output
   mix=1;
   gr_meter=1;
   gr_meter_decay = exp(1/(1*srate));
+  ext_gr_meter = 0;
 
 @slider
   thresh = slider1;
@@ -105,7 +106,7 @@ out_pin:right output
     cratio = ratio;
   );
   
-  gr = -overdb * (cratio-1)/cratio;
+  ext_gr_meter = gr = -overdb * (cratio-1)/cratio;
   grv = exp(gr * db2log);
   
   runmax = maxover + relcoef * (runmax - maxover);  // highest peak for setting att/rel decays in reltime

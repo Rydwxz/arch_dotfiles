@@ -26,6 +26,7 @@ out_pin:right output
 
 @init
 ext_tail_size=-1;
+ext_gr_meter = 0;
 
 gain = 1; c = 8.65617025; dc = 10^(-30);
 
@@ -49,6 +50,9 @@ spl0 /= gain;
 spl1 /= gain;
 
 gain < gr_meter ? gr_meter=gain : ( gr_meter*=gr_meter_decay; gr_meter>1?gr_meter=1; );
+
+@block
+ext_gr_meter = gr_meter > 0 ? log(gr_meter)*(20/log(10)) : -150;
 
 @gfx 0 32 // request horizontal/vertical heights (0 means dont care)
 

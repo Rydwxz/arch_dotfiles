@@ -62,6 +62,7 @@ out_pin:right output
 @init
 //=============================================================================
 ext_tail_size = -1;
+ext_gr_meter = 0;
 br = 0;
 clip = 0;
 tlt_gain = 0;
@@ -394,6 +395,7 @@ n = 0;
 );
 n += 1;
 
+ext_gr_meter = gr_meter > 0 ? log(gr_meter) * (20/log(10)) : -150;
 
 //-----------------------------------------
 // interpolate tilt filter coeffcients
