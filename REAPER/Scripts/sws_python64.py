@@ -1,1 +1,0 @@
-/usr/lib/sws/sws_python64.py

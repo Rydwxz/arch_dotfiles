@@ -1,2 +1,0 @@
-OPTIONS=pickup_types:$?!=+"/
-AUTOPICKUP_EXCEPTION=">scroll of scare monster"
