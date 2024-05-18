@@ -1,0 +1,11 @@
+{
+  "filter": {
+    "name": "Redward"
+  },
+  "_ns": "b.users",
+  "_host": "localhost:27017",
+  "_id": "bdf2f644-f720-427b-ae88-f5d5ad9ae0f3",
+  "_lastExecuted": {
+    "$date": "2024-05-10T03:41:35.220Z"
+  }
+}

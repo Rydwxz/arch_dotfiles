@@ -1,0 +1,11 @@
+{
+  "filter": {
+    "name": "Cameron"
+  },
+  "_ns": "b.users",
+  "_host": "localhost:27017",
+  "_id": "97b3f205-6407-415b-8225-20a72e36f2b7",
+  "_lastExecuted": {
+    "$date": "2024-05-11T18:12:40.812Z"
+  }
+}

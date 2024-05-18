@@ -1,0 +1,11 @@
+{
+  "filter": {
+    "role": "composer"
+  },
+  "_ns": "b.users",
+  "_host": "localhost:27017",
+  "_id": "d4f857a8-2e83-43d6-bdd9-daad711c5128",
+  "_lastExecuted": {
+    "$date": "2024-05-10T05:10:52.099Z"
+  }
+}

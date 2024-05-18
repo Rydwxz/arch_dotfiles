@@ -1,0 +1,57 @@
+2024/05/13-18:06:45.288 2fd5 Reusing MANIFEST /home/rw/.config/MongoDB Compass/Local Storage/leveldb/MANIFEST-000001
+2024/05/13-18:06:45.310 2fd5 Recovering log #3
+2024/05/13-18:06:45.318 2fd5 Reusing old log /home/rw/.config/MongoDB Compass/Local Storage/leveldb/000003.log 
+2024/05/13-18:15:46.114 2fd6 Level-0 table #5: started
+2024/05/13-18:15:46.119 2fd6 Level-0 table #5: 15808 bytes OK
+2024/05/13-18:15:46.123 2fd6 Delete type=0 #3
+2024/05/13-18:54:46.108 2fd6 Level-0 table #7: started
+2024/05/13-18:54:46.113 2fd6 Level-0 table #7: 15730 bytes OK
+2024/05/13-18:54:46.118 2fd6 Delete type=0 #4
+2024/05/13-19:33:46.119 2fd5 Level-0 table #9: started
+2024/05/13-19:33:46.122 2fd5 Level-0 table #9: 15713 bytes OK
+2024/05/13-19:33:46.127 2fd5 Delete type=0 #6
+2024/05/13-20:12:46.112 2fd5 Level-0 table #11: started
+2024/05/13-20:12:46.115 2fd5 Level-0 table #11: 15687 bytes OK
+2024/05/13-20:12:46.119 2fd5 Delete type=0 #8
+2024/05/13-20:51:46.110 2fd6 Level-0 table #13: started
+2024/05/13-20:51:46.115 2fd6 Level-0 table #13: 15674 bytes OK
+2024/05/13-20:51:46.119 2fd6 Delete type=0 #10
+2024/05/13-21:30:46.112 2fd6 Level-0 table #15: started
+2024/05/13-21:30:46.117 2fd6 Level-0 table #15: 15680 bytes OK
+2024/05/13-21:30:46.121 2fd6 Delete type=0 #12
+2024/05/13-21:30:46.122 2fd6 Compacting 4@0 + 1@1 files
+2024/05/13-21:30:46.127 2fd6 Generated table #16@0: 2 keys, 1104 bytes
+2024/05/13-21:30:46.127 2fd6 Compacted 4@0 + 1@1 files => 1104 bytes
+2024/05/13-21:30:46.132 2fd6 compacted to: files[ 0 1 1 0 0 0 0 ]
+2024/05/13-21:30:46.133 2fd6 Delete type=2 #7
+2024/05/13-21:30:46.133 2fd6 Delete type=2 #11
+2024/05/13-21:30:46.133 2fd6 Delete type=2 #15
+2024/05/13-21:30:46.133 2fd6 Delete type=2 #13
+2024/05/13-21:30:46.133 2fd6 Delete type=2 #9
+2024/05/13-23:52:11.108 2fd6 Level-0 table #18: started
+2024/05/13-23:52:11.112 2fd6 Level-0 table #18: 15678 bytes OK
+2024/05/13-23:52:11.116 2fd6 Delete type=0 #14
+2024/05/14-00:31:11.109 2fd6 Level-0 table #20: started
+2024/05/14-00:31:11.113 2fd6 Level-0 table #20: 15677 bytes OK
+2024/05/14-00:31:11.118 2fd6 Delete type=0 #17
+2024/05/14-08:56:00.554 2fd6 Level-0 table #22: started
+2024/05/14-08:56:00.558 2fd6 Level-0 table #22: 15696 bytes OK
+2024/05/14-08:56:00.562 2fd6 Delete type=0 #19
+2024/05/14-16:28:03.090 2fd5 Level-0 table #24: started
+2024/05/14-16:28:03.094 2fd5 Level-0 table #24: 15682 bytes OK
+2024/05/14-16:28:03.099 2fd5 Delete type=0 #21
+2024/05/14-16:28:03.099 2fd5 Compacting 4@0 + 1@1 files
+2024/05/14-16:28:03.105 2fd5 Generated table #25@0: 2 keys, 1104 bytes
+2024/05/14-16:28:03.105 2fd5 Compacted 4@0 + 1@1 files => 1104 bytes
+2024/05/14-16:28:03.109 2fd5 compacted to: files[ 0 1 1 0 0 0 0 ]
+2024/05/14-16:28:03.110 2fd5 Delete type=2 #16
+2024/05/14-16:28:03.110 2fd5 Delete type=2 #24
+2024/05/14-16:28:03.110 2fd5 Delete type=2 #22
+2024/05/14-16:28:03.111 2fd5 Delete type=2 #20
+2024/05/14-16:28:03.111 2fd5 Delete type=2 #18
+2024/05/14-17:07:03.636 2fd6 Level-0 table #27: started
+2024/05/14-17:07:03.640 2fd6 Level-0 table #27: 15676 bytes OK
+2024/05/14-17:07:03.644 2fd6 Delete type=0 #23
+2024/05/14-17:46:03.639 2fd6 Level-0 table #29: started
+2024/05/14-17:46:03.644 2fd6 Level-0 table #29: 15679 bytes OK
+2024/05/14-17:46:03.648 2fd6 Delete type=0 #26

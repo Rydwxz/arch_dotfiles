@@ -1,0 +1,11 @@
+{
+  "filter": {
+    "role": "admin"
+  },
+  "_ns": "b.users",
+  "_host": "localhost:27017",
+  "_id": "14171c7c-4962-4e63-87f7-589195eb492b",
+  "_lastExecuted": {
+    "$date": "2024-05-10T05:11:10.554Z"
+  }
+}

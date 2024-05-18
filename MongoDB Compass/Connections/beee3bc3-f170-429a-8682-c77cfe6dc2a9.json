@@ -1,0 +1,17 @@
+{
+  "_id": "beee3bc3-f170-429a-8682-c77cfe6dc2a9",
+  "connectionInfo": {
+    "id": "beee3bc3-f170-429a-8682-c77cfe6dc2a9",
+    "lastUsed": "2024-05-15T03:53:09.729Z",
+    "favorite": {
+      "name": "local-smi",
+      "color": "color6"
+    },
+    "savedConnectionType": "favorite",
+    "connectionOptions": {
+      "connectionString": "mongodb://localhost:27017/",
+      "oidc": {}
+    }
+  },
+  "version": 1
+}

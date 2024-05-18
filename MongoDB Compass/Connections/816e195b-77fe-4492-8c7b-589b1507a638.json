@@ -1,0 +1,12 @@
+{
+  "_id": "816e195b-77fe-4492-8c7b-589b1507a638",
+  "connectionInfo": {
+    "id": "816e195b-77fe-4492-8c7b-589b1507a638",
+    "connectionOptions": {
+      "connectionString": "mongodb://localhost:27017/",
+      "oidc": {}
+    },
+    "lastUsed": "2024-05-10T03:20:45.389Z"
+  },
+  "version": 1
+}
