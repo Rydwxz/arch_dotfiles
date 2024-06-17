@@ -1,0 +1,5 @@
+#!/bin/zsh
+
+export LLAMA_CUDA=true
+export LLAMA_CUDA_DMMV_X=256
+export LLAMA_CUDA_DMMV_Y=32

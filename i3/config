@@ -39,8 +39,11 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec kitty
-bindsym $mod+Ctrl+Return exec alacritty
+bindsym $mod+Return exec wezterm
+
+bindsym $mod+Shift+f exec firefox
+bindsym $mod+Shift+s exec spotify
+
 
 # kill focused window
 bindsym $mod+q kill
@@ -53,11 +56,20 @@ bindsym $mod+o exec --no-startup-id dmenu_run
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
+# bindsym $mod+Mod1+f exec firefox
+# bindsym $mod+Mod2+s exec spotify
+
+# directional
+set $l h
+set $d j
+set $u k
+set $r l
+
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+$l focus left
+bindsym $mod+$d focus down
+bindsym $mod+$u focus up
+bindsym $mod+$r focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -66,10 +78,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+$l move left
+bindsym $mod+Shift+$d move down
+bindsym $mod+Shift+$u move up
+bindsym $mod+Shift+$r move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -78,10 +90,8 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
-
-# split in vertical orientation
-bindsym $mod+v split v
+bindsym $mod+s split v
+bindsym $mod+v split h
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -115,6 +125,9 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+
+workspace 1 output HDMI-0
+workspace 9 output DP-0
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -155,10 +168,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 3 px or 3 ppt
-        bindsym k resize grow height 3 px or 3 ppt
-        bindsym l resize shrink height 3 px or 3 ppt
-        bindsym semicolon resize grow width 3 px or 3 ppt
+        bindsym $l resize shrink width 3 px or 3 ppt
+        bindsym $d resize grow height 3 px or 3 ppt
+        bindsym $u resize shrink height 3 px or 3 ppt
+        bindsym $r resize grow width 3 px or 3 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 3 px or 3 ppt
