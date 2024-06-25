@@ -58,6 +58,8 @@ local kmp = {
 
 	  { key = ';', mods = mod,
       action = wta.ActivateTabRelative(1) },
+	  { key = ':', mods = Smod,
+      action = wta.ActivateTabRelative(1) },
     { key = "'", mods = mod,
       action = wta.ActivateTabRelative(-1) },
 
