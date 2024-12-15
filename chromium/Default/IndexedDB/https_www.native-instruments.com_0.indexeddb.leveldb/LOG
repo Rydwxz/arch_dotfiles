@@ -1,0 +1,6 @@
+2024/12/10-23:41:57.730 683c Creating DB /home/rw/.config/chromium/Default/IndexedDB/https_www.native-instruments.com_0.indexeddb.leveldb since it was missing.
+2024/12/10-23:41:57.738 683c Reusing MANIFEST /home/rw/.config/chromium/Default/IndexedDB/https_www.native-instruments.com_0.indexeddb.leveldb/MANIFEST-000001
+2024/12/10-23:41:59.805 683d Level-0 table #5: started
+2024/12/10-23:41:59.808 683d Level-0 table #5: 3901 bytes OK
+2024/12/10-23:41:59.811 683d Delete type=0 #3
+2024/12/10-23:41:59.811 683d Manual compaction at level-0 from (begin) .. (end); will stop at (end)

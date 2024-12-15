@@ -1,0 +1,464 @@
+desc: Mic Driver [GuitarAmigo]
+// Successor to EZMB.
+// GuitarAmigo (youtube\GuitarAmigo)
+// https://www.youtube.com/channel/UCLKBp-CdKLP-Eyo4_BlQMdA
+// updated 2024.11.30
+
+// FULL CREDIT TO AUTHORS (sources):
+// witti - channel_strip
+// witti - softknee_comp
+// witti - w_expander_down
+// Liteon - VU Meter
+
+//__________slider__________ISGA
+slider1:slider_inputselect_ISGA=2<0,2,1{LEFT,RIGHT,Stereo}>Input Select
+//__________slider__________CSHPFW
+slider3:slider_hpfhz_CSHPFW=200<0,300,5>HPF (Hz) (0 = bypass)
+//__________slider__________MDGA
+slider5:slider_drive_mdga=36<0,60,3>DRIVE (dB) (0 = bypass)
+slider6:slider_hush_mdga=0<0,60,3>HUSH (0 = bypass)
+slider8:slider_fader_cmga=0<-60,0,1>Fader (dB) (0 = -0.3 dBFS)
+//__________slider__________ASS
+slider10:slider_level_ASS=-60<-120,0,6>[METER]             +++  Output Level (dBFS)
+//__________slider__________CREDITS
+slider12:0<0,3,1{witti - channel_strip,witti - softknee_comp,witti - w_expander_down,Liteon - VU Meter}>FULL CREDIT TO AUTHORS (sources)
+
+in_pin:L in
+in_pin:R in
+out_pin:L out
+out_pin:R out
+
+//____________________________________________________________________________________________________
+@init
+//____________________________________________________________________________________________________
+
+//__________@init__________MDGA
+	// MDGA - MicDriver GuitarAmigo
+	function db2ratio_MDGA(d) ( 10^(d/20); );
+
+	// mga kalandian
+	MaxDrive = 60; // 48.
+	MaxHush = 60; // 48.
+ See
+	// Define points A(x,y), B(x,y), C(x,y)
+	// prefixed with 'a_' for convenience
+
+	a_Cx = 0; // headroom.
+	a_Cy = -0.3; // output ceiling.https://github.com/robbert-vdh/nih-plug
+
+	// a_Bx - @slider_MDGA
+	a_By = -6; // fixed B output
+
+	// SKCW - soft knee compressor - witti
+	// fixed compressor. threshold @ -6. peak @ -0.3. headroom @ +78 dB. ratio @ 14.736842.
+
+	slider_threshold_SKCW = a_By;
+	slider_ratio_SKCW = 14.736842;
+	slider_attack_SKCW = 0;
+	slider_release_SKCW = 50;
+	slider_makeupgain_SKCW = 0;
+
+	// SKCW - soft knee compressor - witti (fake limiter)
+	slider_ceiling_SKCW_LGA = a_Cy;
+
+	// WEDW - expander
+	slider_attack_WEDW = 0; // 0.1, 0.
+	slider_release_default_WEDW = 500; // 250, 500.
+	slider_envelope_decay_WEDW = 500; // 250, 500.
+	gate_default_WEDW = -168; // -120, -168.
+	slider_output_default_WEDW = 0; // 0.
+
+	// ASS - level meter
+	refreshms_ASS = 250;      //refresh rate in milliseconds
+
+//__________@init__________MDGA
+
+//__________@init__________SKCW
+	// hidden default values
+	slider_knee_default_SKCW = 0;
+	slider_delta_default_SKCW = 0;
+	// hidden default values
+
+	threshold_SKCW = slider_threshold_SKCW;
+	knee_width_SKCW = abs(slider_threshold_SKCW*2*slider_knee_default_SKCW*0.01);
+
+	ratio_SKCW = slider_ratio_SKCW;
+	slope_SKCW = ((1 - ratio_SKCW) / ratio_SKCW);
+
+	attack_SKCW = slider_attack_SKCW/1000;
+	release_SKCW = slider_release_SKCW/1000;
+	alphaA_SKCW = attack_SKCW>0 ? exp(-1 / (attack_SKCW * srate)) : 0;
+	alphaR_SKCW = release_SKCW>0 ? exp(-1 / (release_SKCW * srate)) : 0;
+
+	Tlo_SKCW = (threshold_SKCW - knee_width_SKCW / 2);
+	Thi_SKCW = (threshold_SKCW + knee_width_SKCW / 2);
+	knee_factor_SKCW = (slope_SKCW / (knee_width_SKCW * 2));
+
+	yR_SKCW = 0;
+	yA_SKCW = 0;
+
+	function computeGain_SKCW(x)
+		(
+		(x < Tlo_SKCW) ? x = 0 :
+		(x > Thi_SKCW) ? x = slope_SKCW * (x - threshold_SKCW) :
+		(delta_SKCW = x - Tlo_SKCW;
+		x = delta_SKCW * delta_SKCW * knee_factor_SKCW;);
+		);
+
+	function smoothAverage_SKCW(x, alphaA_SKCW, alphaR_SKCW)
+		(
+		eps_SKCW = 0.0000000001;
+		yR_SKCW = min(x, alphaR_SKCW * yR_SKCW + (1 - alphaR_SKCW) * x + eps_SKCW - eps_SKCW);
+		yA_SKCW = alphaA_SKCW * yA_SKCW + (1 - alphaA_SKCW) * yR_SKCW + eps_SKCW - eps_SKCW;
+		x = yA_SKCW;
+		);
+
+	dbc_SKCW = 20/log(10);
+	function db2ratio_SKCW(d) ( 10^(d/20); );
+	function ratio2db_SKCW(r) ( log(abs(r))*dbc_SKCW; );
+//__________@init__________SKCW
+
+//__________@init__________SKCW_LGA
+	function CeilingOffset_SKCW_LGA(CeilingOffsetArg)(
+	// setting ceiling to 0 would actually set it to -0.3
+	CeilingOffsetArg == 0 ? (
+		// a & b are equal
+		-0.3;
+	) : (
+		// a & b are not equal
+		CeilingOffsetArg;
+	));
+
+	function computeGain_SKCW_LGA(x)
+		(
+		(x < Tlo_SKCW_LGA) ? x = 0 :
+		(x > Thi_SKCW_LGA) ? x = slope_SKCW_LGA * (x - threshold_SKCW_LGA) :
+		(delta_SKCW_LGA = x - Tlo_SKCW_LGA;
+		x = delta_SKCW_LGA * delta_SKCW_LGA * knee_factor_SKCW_LGA;);
+		);
+
+	function smoothAverage_SKCW_LGA(x, alphaA_SKCW_LGA, alphaR_SKCW_LGA)
+		(
+		eps_SKCW_LGA = 0.0000000001;
+		yR_SKCW_LGA = min(x, alphaR_SKCW_LGA * yR_SKCW_LGA + (1 - alphaR_SKCW_LGA) * x + eps_SKCW_LGA - eps_SKCW_LGA);
+		yA_SKCW_LGA = alphaA_SKCW_LGA * yA_SKCW_LGA + (1 - alphaA_SKCW_LGA) * yR_SKCW_LGA + eps_SKCW_LGA - eps_SKCW_LGA;
+		x = yA_SKCW_LGA;
+		);
+
+	function db2ratio_SKCW_LGA(d) (10^(d/20););
+	function ratio2db_SKCW_LGA(r) (log(abs(r))*dbc_SKCW_LGA;);
+ See
+	// hidden default values
+	slider_knee_default_SKCW_LGA = 0;
+	slider_delta_default_SKCW_LGA = 0;
+	slider_attack_default_SKCW_LGA = 0;
+	slider_release_default_SKCW_LGA = 50;
+	slider_makeupgain_default_SKCW_LGA = 0;
+	slider_boost_SKCW_LGA = 0;
+	// hidden default values
+
+	// boost
+	boost_SKCW_LGA = db2ratio_SKCW_LGA(slider_boost_SKCW_LGA);
+
+	threshold_SKCW_LGA = CeilingOffset_SKCW_LGA(slider_ceiling_SKCW_LGA);
+	knee_width_SKCW_LGA = abs(threshold_SKCW_LGA*2*slider_knee_default_SKCW_LGA*0.01);
+
+	// negative ratio hack
+	ratio_SKCW_LGA = (threshold_SKCW_LGA - 1) * 100;
+	//ratio_SKCW_LGA = slider_ratio_SKCW_LGA;
+
+	slope_SKCW_LGA = ((1 - ratio_SKCW_LGA) / ratio_SKCW_LGA);
+
+	attack_SKCW_LGA = slider_attack_default_SKCW_LGA/1000;
+	release_SKCW_LGA = slider_release_default_SKCW_LGA/1000;
+	alphaA_SKCW_LGA = attack_SKCW_LGA>0 ? exp(-1 / (attack_SKCW_LGA * srate)) : 0;
+	alphaR_SKCW_LGA = release_SKCW_LGA>0 ? exp(-1 / (release_SKCW_LGA * srate)) : 0;
+
+	Tlo_SKCW_LGA = (threshold_SKCW_LGA - knee_width_SKCW_LGA / 2);
+	Thi_SKCW_LGA = (threshold_SKCW_LGA + knee_width_SKCW_LGA / 2);
+	knee_factor_SKCW_LGA = (slope_SKCW_LGA / (knee_width_SKCW_LGA * 2));
+
+	yR_SKCW_LGA = 0;
+	yA_SKCW_LGA = 0;
+
+	dbc_SKCW_LGA = 20/log(10);
+//__________@init__________SKCW_LGA
+
+//__________@init__________WEDW
+	output_WEDW = 1;
+	transfer_A_WEDW = 0;
+	transfer_B_WEDW = 1;
+	gain_WEDW = 1;
+	env_WEDW = 0;
+
+	gate_WEDW = 10^(gate_default_WEDW/20); // raw, can be improved... orig is -120
+
+	log2dB_WEDW = 8.6858896380650365530225783783321;
+	db2log_WEDW = 0.11512925464970228420089957273422;
+//__________@init__________WEDW
+
+//__________@init__________ASS
+	function spltodbod_ASS(x) (floor((20*log10(x))*10)/10); // spl to dB one decimal place
+
+	maxnsamples_ASS = (refreshms_ASS*srate)/1000;
+//__________@init__________ASS
+
+
+//____________________________________________________________________________________________________
+@slider
+//____________________________________________________________________________________________________
+
+//__________@slider__________MDGA
+	drive_mdga = slider_drive_mdga;
+
+	// boost portion
+	a_Bx = (-1 * drive_mdga) + a_By;
+
+	// floor portion
+	a_max_Ay = a_Bx + a_By;
+	a_min_Ay = a_max_Ay - MaxHush;
+
+	DriveHalf = drive_mdga/2;
+	HushHalf = slider_hush_mdga/2;
+
+	a_Ax = a_min_Ay + slider_hush_mdga;
+
+	// when hush equals drive, maintains (-60,-60)
+	a_Ay = a_min_Ay + DriveHalf + HushHalf;
+	// when hush equals drive, maintains (-60,-60)
+
+	// compute slope AB (expander ratio)
+	// By (expander threshold)
+	diffBxAx_mdga = a_Bx - a_Ax;
+	diffByAy_mdga = a_By - a_Ay;
+	mdga_ExpRatio = diffBxAx_mdga / diffByAy_mdga;
+	mdga_ExpThresh = a_By;
+
+	hush_mdga = slider_hush_mdga;
+//__________@slider__________MDGA
+
+//__________@slider__________ISGA
+	inputselect_ISGA = slider_inputselect_ISGA;
+//__________@slider__________ISGA
+
+//__________@slider__________CSHPFW
+	freq1_CSHPFW = slider_hpfhz_CSHPFW;
+	slider_hpfhz_CSHPFW == 0 ? hpf_CSHPFW = 0 : hpf_CSHPFW = 1;
+	a1_CSHPFW = 1;
+	s1_CSHPFW = 1;
+	q1_CSHPFW = 1 / (sqrt((a1_CSHPFW + 1/a1_CSHPFW)*(1/s1_CSHPFW - 1) + 2));
+	w01_CSHPFW = 2 * $pi * freq1_CSHPFW/srate;
+	cosw01_CSHPFW = cos(w01_CSHPFW);
+	sinw01_CSHPFW = sin(w01_CSHPFW);
+	alpha1_CSHPFW = sinw01_CSHPFW / (2 * q1_CSHPFW);
+	b01_CSHPFW = (1 + cosw01_CSHPFW)/2;
+	b11_CSHPFW = -(1 + cosw01_CSHPFW);
+	b21_CSHPFW = (1 + cosw01_CSHPFW)/2;
+	a01_CSHPFW = 1 + alpha1_CSHPFW;
+	a11_CSHPFW = -2 * cosw01_CSHPFW;
+	a21_CSHPFW = 1 - alpha1_CSHPFW;
+	b01_CSHPFW /= a01_CSHPFW;
+	b11_CSHPFW /= a01_CSHPFW;
+	b21_CSHPFW /= a01_CSHPFW;
+	a11_CSHPFW /= a01_CSHPFW;
+	a21_CSHPFW /= a01_CSHPFW;
+//__________@slider__________CSHPFW
+
+//__________@slider__________SKCW
+	threshold_SKCW = slider_threshold_SKCW;
+	knee_width_SKCW = abs(slider_threshold_SKCW*2*slider_knee_default_SKCW*0.01);
+
+	ratio_SKCW = slider_ratio_SKCW;
+	slope_SKCW = ((1 - ratio_SKCW) / ratio_SKCW);
+
+	attack_SKCW = slider_attack_SKCW/1000;
+	release_SKCW = slider_release_SKCW/1000;
+	alphaA_SKCW = attack_SKCW>0 ? exp(-1 / (attack_SKCW * srate)) : 0;
+	alphaR_SKCW = release_SKCW>0 ? exp(-1 / (release_SKCW * srate)) : 0;
+
+	Tlo_SKCW = (threshold_SKCW - knee_width_SKCW / 2);
+	Thi_SKCW = (threshold_SKCW + knee_width_SKCW / 2);
+	knee_factor_SKCW = (slope_SKCW / (knee_width_SKCW * 2));
+
+	output_SKCW = 10^(slider_makeupgain_SKCW/20);
+
+	listen_SKCW = slider_delta_default_SKCW;
+//__________@slider__________SKCW
+
+//__________@slider__________SKCW_LGA
+	// boost
+	boost_SKCW_LGA = db2ratio_SKCW_LGA(slider_boost_SKCW_LGA);
+
+	threshold_SKCW_LGA = CeilingOffset_SKCW_LGA(slider_ceiling_SKCW_LGA);
+	knee_width_SKCW_LGA = abs(threshold_SKCW_LGA*2*slider_knee_default_SKCW_LGA*0.01);
+
+	// negative ratio hack
+	ratio_SKCW_LGA = (threshold_SKCW_LGA - 1) * 100;
+	//ratio_SKCW_LGA = slider_ratio_SKCW_LGA;
+
+	slope_SKCW_LGA = ((1 - ratio_SKCW_LGA) / ratio_SKCW_LGA);
+
+	attack_SKCW_LGA = slider_attack_default_SKCW_LGA/1000;
+	release_SKCW_LGA = slider_release_default_SKCW_LGA/1000;
+	alphaA_SKCW_LGA = attack_SKCW_LGA>0 ? exp(-1 / (attack_SKCW_LGA * srate)) : 0;
+	alphaR_SKCW_LGA = release_SKCW_LGA>0 ? exp(-1 / (release_SKCW_LGA * srate)) : 0;
+
+	Tlo_SKCW_LGA = (threshold_SKCW_LGA - knee_width_SKCW_LGA / 2);
+	Thi_SKCW_LGA = (threshold_SKCW_LGA + knee_width_SKCW_LGA / 2);
+	knee_factor_SKCW_LGA = (slope_SKCW_LGA / (knee_width_SKCW_LGA * 2));
+
+	output_SKCW_LGA = 10^(slider_makeupgain_default_SKCW_LGA/20);
+
+	listen_SKCW_LGA = slider_delta_default_SKCW_LGA;
+//__________@slider__________SKCW_LGA
+
+//__________@slider__________WEDW
+	threshold_WEDW = 10^(mdga_ExpThresh/20);
+
+	transfer_A_WEDW = (1/mdga_ExpRatio)-1;
+	transfer_B_WEDW = output_WEDW * pow(threshold_WEDW,-transfer_A_WEDW);
+
+	attack_WEDW = exp(-1/(slider_attack_WEDW/1000*srate));
+	release_WEDW = exp(-1/(slider_release_WEDW/1000*srate));
+	envelope_decay_WEDW = exp(-1/(slider_envelope_decay_WEDW/1000*srate));
+
+	vol_WEDW = 10^(slider_output_default_WEDW/20);
+//__________@slider__________WEDW
+
+//__________@slider__________CMGA
+	fader_cmga = slider_fader_cmga;
+//__________@slider__________CMGA
+
+//__________@slider__________ASS
+	// 'reset' routine
+	currentspl_ASS = peaksplcontinual_ASS = countsamplesblock_ASS = 0;
+//__________@slider__________ASS
+
+
+//____________________________________________________________________________________________________
+@block
+//____________________________________________________________________________________________________
+
+//__________@block__________ASS
+	countsamplesblock_ASS > maxnsamples_ASS ? (
+		// update slider
+		slider_level_ASS = spltodbod_ASS(peaksplcontinual_ASS);
+		// reset
+		countsamplesblock_ASS = peaksplcontinual_ASS = 0;
+	):(
+		countsamplesblock_ASS += samplesblock;
+	);
+//__________@block__________ASS
+
+
+//____________________________________________________________________________________________________
+@sample
+//____________________________________________________________________________________________________
+
+//__________@sample__________ISGA
+	inputselect_ISGA < 2 ? (
+		spl0 = spl(inputselect_ISGA);
+		spl1 = spl(inputselect_ISGA);
+	);
+//__________@sample__________ISGA
+
+//__________@sample__________CSHPFW
+	hpf_CSHPFW != 0 ? (
+		ospl0_CSHPFW = spl0;
+		spl0 = b01_CSHPFW * spl0 + b11_CSHPFW * xl11_CSHPFW + b21_CSHPFW * xl21_CSHPFW - a11_CSHPFW * yl11_CSHPFW - a21_CSHPFW * yl21_CSHPFW;
+		xl21_CSHPFW = xl11_CSHPFW;
+		xl11_CSHPFW = ospl0_CSHPFW;
+		yl21_CSHPFW = yl11_CSHPFW;
+		yl11_CSHPFW = spl0;
+		ospl1_CSHPFW = spl1;
+		spl1 = b01_CSHPFW * spl1 + b11_CSHPFW * xr11_CSHPFW + b21_CSHPFW * xr21_CSHPFW - a11_CSHPFW * yr11_CSHPFW - a21_CSHPFW * yr21_CSHPFW;
+		xr21_CSHPFW = xr11_CSHPFW;
+		xr11_CSHPFW = ospl1_CSHPFW;
+		yr21_CSHPFW = yr11_CSHPFW;
+		yr11_CSHPFW = spl1;
+	);
+//__________@sample__________CSHPFW
+
+//__________@sample__________DRIVE
+	spl0 *= db2ratio_MDGA(drive_mdga);
+	spl1 *= db2ratio_MDGA(drive_mdga);
+//__________@sample__________DRIVE
+
+//__________@sample__________SKCW
+	inL_SKCW = spl0;
+	inR_SKCW = spl1;
+
+	xL_SKCW = max(abs(inL_SKCW),abs(inR_SKCW));
+
+	xG_SKCW = ratio2db_SKCW(xL_SKCW);
+	yG_SKCW = computeGain_SKCW(xG_SKCW);
+	cG_SKCW = smoothAverage_SKCW(yG_SKCW, alphaA_SKCW, alphaR_SKCW);
+	cL_SKCW = db2ratio_SKCW(cG_SKCW);
+
+	listen_SKCW == 0 ? (
+	spl0 = inL_SKCW * cL_SKCW * output_SKCW;
+	spl1 = inR_SKCW * cL_SKCW * output_SKCW;
+	);
+	listen_SKCW == 1 ? (
+	spl0 = ((inL_SKCW * cL_SKCW) - inL_SKCW)  * output_SKCW;
+	spl1 = ((inR_SKCW * cL_SKCW) - inR_SKCW)  * output_SKCW;
+	);
+//__________@sample__________SKCW
+
+//__________@sample__________SKCW_LGA
+	inL_SKCW_LGA = spl0*boost_SKCW_LGA;
+	inR_SKCW_LGA = spl1*boost_SKCW_LGA;
+
+	xL_SKCW_LGA = max(abs(inL_SKCW_LGA),abs(inR_SKCW_LGA));
+
+	xG_SKCW_LGA = ratio2db_SKCW_LGA(xL_SKCW_LGA);
+	yG_SKCW_LGA = computeGain_SKCW_LGA(xG_SKCW_LGA);
+	cG_SKCW_LGA = smoothAverage_SKCW_LGA(yG_SKCW_LGA, alphaA_SKCW_LGA, alphaR_SKCW_LGA);
+	cL_SKCW_LGA = db2ratio_SKCW_LGA(cG_SKCW_LGA);
+
+	listen_SKCW_LGA == 0 ? (
+	spl0 = inL_SKCW_LGA * cL_SKCW_LGA * output_SKCW_LGA;
+	spl1 = inR_SKCW_LGA * cL_SKCW_LGA * output_SKCW_LGA;
+	);
+	listen_SKCW_LGA == 1 ? (
+	spl0 = ((inL_SKCW_LGA * cL_SKCW_LGA) - inL_SKCW_LGA)  * output_SKCW_LGA;
+	spl1 = ((inR_SKCW_LGA * cL_SKCW_LGA) - inR_SKCW_LGA)  * output_SKCW_LGA;
+	);
+//__________@sample__________SKCW_LGA
+
+//__________@sample__________WEDW
+	hush_mdga == 0 ? (
+		// then
+		// expander is bypassed
+		spl0 = spl0;
+		spl1 = spl1;
+	):(
+		// else
+		// expander is active
+		inL_WEDW = spl0;
+		inR_WEDW = spl1;
+
+		det_WEDW = max(abs(inL_WEDW),abs(inR_WEDW));
+		det_WEDW += 0.000000000001;
+		env_WEDW = det_WEDW >= env_WEDW ? det_WEDW : det_WEDW+envelope_decay_WEDW*(env_WEDW-det_WEDW);
+		transfer_gain_WEDW = env_WEDW < threshold_WEDW ? pow(env_WEDW,transfer_A_WEDW)*transfer_B_WEDW:output_WEDW;
+		gain_WEDW = transfer_gain_WEDW > gain_WEDW ? transfer_gain_WEDW+attack_WEDW*(gain_WEDW-transfer_gain_WEDW) : transfer_gain_WEDW+release_WEDW*(gain_WEDW-transfer_gain_WEDW);
+
+		gain_WEDW = max(gain_WEDW,gate_WEDW);
+
+		spl0 = inL_WEDW * gain_WEDW * vol_WEDW;
+		spl1 = inR_WEDW * gain_WEDW * vol_WEDW;
+	);
+//__________@sample__________WEDW
+
+//__________@sample__________CMGA
+	spl0 *= db2ratio_MDGA(fader_cmga);
+	spl1 *= db2ratio_MDGA(fader_cmga);
+//__________@sample__________CMGA
+
+//__________@sample__________ASS
+	currentspl_ASS = max(abs(spl0),abs(spl1));
+
+	// peak continual
+	peaksplcontinual_ASS = max(currentspl_ASS, peaksplcontinual_ASS);
+//__________@sample__________ASS

@@ -2,6 +2,8 @@
 
 (foreground (color-rgb 1 0.040268456375838979 0.040268456375838979))
 (palette "Color History")
-(font "Sans-serif")
+(font "FiraMono Nerd Font")
+(font-size 14)
+(font-size-unit points)
 
 # end of gimp-text-tool options

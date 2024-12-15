@@ -1,0 +1,6 @@
+2024/12/09-23:36:20.032 2112 Creating DB /home/rw/.config/chromium/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb since it was missing.
+2024/12/09-23:36:20.039 2112 Reusing MANIFEST /home/rw/.config/chromium/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
+2024/12/09-23:39:17.963 2113 Level-0 table #5: started
+2024/12/09-23:39:17.968 2113 Level-0 table #5: 95992 bytes OK
+2024/12/09-23:39:17.972 2113 Delete type=0 #3
+2024/12/09-23:39:17.972 2113 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

@@ -1,0 +1,6 @@
+2024/12/10-17:11:51.039 2113 Creating DB /home/rw/.config/chromium/Default/IndexedDB/https_www.sweetwater.com_0.indexeddb.leveldb since it was missing.
+2024/12/10-17:11:51.047 2113 Reusing MANIFEST /home/rw/.config/chromium/Default/IndexedDB/https_www.sweetwater.com_0.indexeddb.leveldb/MANIFEST-000001
+2024/12/10-17:12:08.645 2115 Level-0 table #5: started
+2024/12/10-17:12:08.647 2115 Level-0 table #5: 589 bytes OK
+2024/12/10-17:12:08.652 2115 Delete type=0 #3
+2024/12/10-17:12:08.652 2113 Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)

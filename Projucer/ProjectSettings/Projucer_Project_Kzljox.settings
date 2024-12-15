@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PROPERTIES>
+  <VALUE name="projectWindowPos" val="862 1082 856 1412"/>
+  <VALUE name="lastDocs">
+    <RECENT_DOCUMENTS>
+      <PREVIOUS>
+        <DOC file="/usr/share/doc/juce/README.md" state="0:0:0"/>
+      </PREVIOUS>
+      <NEXT/>
+    </RECENT_DOCUMENTS>
+  </VALUE>
+  <VALUE name="fileTreeState">
+    <OPEN id="qu5zi0" scrollPos="0"/>
+  </VALUE>
+  <VALUE name="moduleTreeState">
+    <OPEN id="modules" scrollPos="0"/>
+  </VALUE>
+  <VALUE name="exportersTreeState">
+    <OPEN id="exporters" scrollPos="0"/>
+  </VALUE>
+</PROPERTIES>

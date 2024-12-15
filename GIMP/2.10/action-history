@@ -1,7 +1,13 @@
 # GIMP action-history
 
-(history-item "file-open" 1)
+(history-item "file-open" 4)
 (history-item "file-save-as" 1)
 (history-item "file-export-as" 2)
+(history-item "file-quit" 1)
+(history-item "tools-zoom" 0)
+(history-item "file-close-all" 0)
+(history-item "tools-airbrush" 0)
+(history-item "image-new" 0)
+(history-item "image-rotate-90" 1)
 
 # end of action-history

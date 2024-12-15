@@ -3,22 +3,22 @@ local wt = require 'wezterm'
 local cfg = {
 
   font = wt.font_with_fallback {
-    { family = "FiraCode Nerd Font", weight="Regular", stretch="Normal", style="Normal" },
-    { family = "FiraMono Nerd Font Mono", weight="Regular", stretch="Normal", style="Normal" },
-    { family = "Fira Code Symbol", weight="Regular", stretch="Normal", style="Normal" },
+    { family = "FiraCode Nerd Font",      weight = "Regular", stretch = "Normal", style = "Normal" },
+    { family = "FiraMono Nerd Font Mono", weight = "Regular", stretch = "Normal", style = "Normal" },
+    { family = "Fira Code Symbol",        weight = "Regular", stretch = "Normal", style = "Normal" },
   }, -- /usr/share/fonts/TTF/FiraCodeNerdFontMono-Light.ttf, FontConfig
   font_size = 13.8,
 
   enable_tab_bar = false,
 
   window_background_opacity = 0.75,
-  window_padding = {left=2, right=2, top=2, bottom=2, },
+  window_padding = { left = 2, right = 2, top = 2, bottom = 2, },
 
   colors = {
     foreground = '#ffb7f8',
     -- background = '#160014',
     background = '#000000',
-    cursor_bg = '#e90020', -- spaceship dir/char
+    cursor_bg = '#e90020',     -- spaceship dir/char
     cursor_border = '#e90020', -- spaceship dir/char
     ansi = {
       '#4e596b',
@@ -26,7 +26,7 @@ local cfg = {
       '#5bcc8f',
       '#ffec5a',
       '#9586f4',
-      '#fb5ea3',
+      '#fb6ea3',
       '#79c8b6',
       '#91a0b1',
     },
@@ -42,7 +42,7 @@ local cfg = {
     },
     selection_fg = '#160014',
     selection_bg = '#ef4288',
-    split = '#b10024', -- nice shade
+    split = '#b10024',               -- nice shade
   },
   force_reverse_video_cursor = true, -- disable for cool red cursor
   default_cursor_style = 'BlinkingBlock',
@@ -53,9 +53,12 @@ local cfg = {
   window_close_confirmation = "NeverPrompt",
 
   leader = { key = 'z', mods = 'WIN', },
-  disable_default_key_bindings = true,
+  -- disable_default_key_bindings = true, -- thise line costs us vim motions while editing the command line
+  default_prog = { '/usr/bin/nu' }, -- gets rid ugly print at startup, which is the multiplexer and deserves a better solution, but I'm not using the multiplexer atm
+  ssh_domains = require 'dmn'.ssh,
+  unix_domains = require 'dmn'.unix,
   keys = require 'kmp',
-  default_prog = { '/usr/bin/zsh' }, -- gets rid ugly print at startup, which is the multiplexer and deserves a better solution, but I'm not using the multiplexer atm
 
 }
+
 return cfg

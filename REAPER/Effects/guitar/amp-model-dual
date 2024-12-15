@@ -45,7 +45,7 @@ rimpbuf=512*1024;
         file_mem(filehandle,impbuf,impbuf_l*impbuf_nch);
       );
       file_close(filehandle);
-    );
+    ) : lslider1 = -1;
   );
   tmp=slider2|0;
   tmp != lslider2 ? 
@@ -63,7 +63,7 @@ rimpbuf=512*1024;
         file_mem(filehandle,rimpbuf,rimpbuf_l*rimpbuf_nch);
       );
       file_close(filehandle);
-    );
+    ) : lslider2 = -1;
   );
 
   useresample != slider4 ? (useresample=slider4; need_refft=1; );

@@ -1,0 +1,8 @@
+
+**********************************************************
+Projucer 7.0.12  ---  Build date: Apr 23 2024
+Log started: 9 Nov 2024 2:06:06am
+
+Linux
+CPU: 1601MHz  Cores: 12  64219MB
+Shutdown

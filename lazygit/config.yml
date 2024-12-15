@@ -1,0 +1,5 @@
+git:
+  log:
+    showGraph: always
+gui:
+  nerdFontsVersion: "3"

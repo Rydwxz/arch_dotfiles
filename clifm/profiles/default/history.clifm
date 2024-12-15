@@ -1,0 +1,253 @@
+edit
+#1724912712
+dev/bhs
+#1724912722
+dev
+#1724912726
+../
+#1724912730
+dev/nv/bhs
+#1724912745
+rm 3
+#1724912892
+help
+#1724915462
+ll
+#1724915486
+?
+#1724915574
+~
+#1724915580
+f
+#1724915583
+b
+#1724915586
+f
+#1724915587
+b
+#1724915588
+f
+#1724915588
+b
+#1724915639
+ll
+#1724943274
+?
+#1724944253
+ll
+#1724944411
+~/.config/
+#1724945833
+:qa
+#1724989910
+?
+#1724992214
+ll
+#1724992635
+qq
+#1724992640
+ll
+#1725221472
+s all
+#1725221476
+s -a
+#1725221480
+sel --help
+#1725221815
+s *
+#1725221822
+~/doc/ref/
+#1725221833
+ls
+#1725221847
+cp --help
+#1725221876
+c -h
+#1725221923
+c sel
+#1725221932
+ls
+#1725222026
+s
+#1725222037
+ds *
+#1725222048
+ls WP
+#1725222057
+WP/20210924_TD1008_v3.13.pdf
+#1725222091
+ll
+#1725222305
+mkdir sound
+#1725222358
+s *
+#1725222371
+~/doc/ref/
+#1725222404
+mkdir Bob\ McCarthy\ -\ Sound\ Systems_\ Design\ and\ Optimization_\ Modern\ Techniques\ and\ Tools\ for\ Sound\ System\ Design\ and\ Alignment-Focal\ Press\ \(2007\).pdf
+#1725222409
+mkdir sound
+#1725222424
+ds *
+#1725222438
+s Alton\ F.\ Everest\ -\ The\ master\ handbook\ of\ acoustics-McGraw-Hill\ Companies\ \(2002\).pdf
+#1725222491
+s 6 15
+#1725222500
+c sel audio/
+#1725222521
+ls audio
+#1725222536
+c sel sound/
+#1725222543
+rm sel
+#1725222552
+audio/
+#1725222602
+s 1 3 5
+#1725222604
+rm sel
+#1725222614
+ls
+#1725222669
+mv 6 9 11 13 14 audio/
+#1725222916
+rm 7
+#1725222928
+mkdir ee/
+#1725222945
+mv 6 8 ee/
+#1725223369
+mv 6 cs
+#1725225815
+mv 8 9 15 scheme/
+#1725239466
+~/Downloads/
+#1725239565
+mv 5 9 11 12 13 14 15 16 17 19 22 24 25 26 27 ~/doc/ref/
+#1725239569
+b
+#1725239629
+mv 6 7 9 10 11 16 17 18 21 audio
+#1725239641
+mv 6 cs/linux/
+#1725239659
+mv 6 7 cs/rust
+#1725239683
+mv 6 cs/linux/
+#1725239694
+mv 6 cs
+#1725239699
+mv 7 cs/rust
+#1725239829
+cs
+#1725239834
+cs/
+#1725261079
+aud
+#1725261081
+audio/
+#1725261092
+../
+#1725290592
+nvim 41
+#1725290620
+rm 41-43
+#1726204497
+mv 5 8 11 17 19 20 22 ~/doc/ref/cs
+#1726204502
+ll
+#1726204964
+mv 14 ~/doc/ref/cs/rust
+#1726204979
+~/doc/ref/cs
+#1726205143
+ll
+#1726205313
+ls
+#1726205331
+mkdir func
+#1726205397
+mv 5 6 7 15 17 19 21 func
+#1726205416
+mv 14 rust
+#1726205423
+mkdir haskell
+#1726205436
+mv 13 haskell
+#1726205464
+mkdir metalang
+#1726205482
+mv 12 14 me
+#1726205486
+mv 12 14 metalang/
+#1726205493
+mkdir bend
+#1726205508
+mv HVM2paper.pdf 10 11 bend
+#1726205520
+mv 9 10 11 bend
+#1726205526
+ls
+#1726205530
+ls bend
+#1726291382
+mv 2 ProgrammingRust_JimBlandy.pdf
+#1726291396
+mv 2 RustForRustaceans.pdf
+#1726291400
+ll
+#1726291429
+mv 2 ProgrammingRustSafeSystems.pdf
+#1726291444
+mv 6 WritePowerfulRustMacros.pdf
+#1726291454
+mv 7 MasteringRust.pdf
+#1726291460
+mv 7 RustInAction.pdf
+#1726291486
+~/Downloads/
+#1726291488
+ll
+#1726291523
+mv 16 9 20 ~/doc/ref/cs/rust
+#1726291527
+b
+#1726291644
+ll
+#1726292044
+../
+#1726292069
+mv 9 DigitalDesignPrinciples.pdf
+#1726292077
+func
+#1726292099
+firefox FunctionalDesignPrinciplesPatternsAndPractices.pdf
+#1726292438
+../
+#1726292540
+cs
+#1726292542
+cs/
+#1726292879
+mv 6 meta
+#1726293190
+../
+#1726293193
+ccs
+#1726293195
+cs/
+#1726294525
+rust
+#1726294582
+~/Downloads/
+#1726294693
+mv 15 ~/doc/ref/cd/rust
+#1726294714
+ls
+#1726294750
+mv 13 RustProgrammingByExample.pdf
+#1726294759
+mv 15 AsyncRust.pdf
+#1726294774
+mv 9 19 ~/doc/ref/cs/rust

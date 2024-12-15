@@ -1,0 +1,24 @@
+2024/12/10-18:55:22.180 543e Reusing MANIFEST /home/rw/.config/chromium/Default/IndexedDB/https_www.reddit.com_0.indexeddb.leveldb/MANIFEST-000001
+2024/12/10-18:55:22.180 543e Recovering log #199
+2024/12/10-18:55:22.186 543e Reusing old log /home/rw/.config/chromium/Default/IndexedDB/https_www.reddit.com_0.indexeddb.leveldb/000199.log 
+2024/12/10-18:56:54.359 543e Level-0 table #204: started
+2024/12/10-18:56:54.373 543e Level-0 table #204: 3430042 bytes OK
+2024/12/10-18:56:54.378 543e Delete type=0 #199
+2024/12/10-19:08:30.049 543e Compacting 1@1 + 1@2 files
+2024/12/10-19:08:30.055 543e Generated table #205@1: 128 keys, 48609 bytes
+2024/12/10-19:08:30.055 543e Compacted 1@1 + 1@2 files => 48609 bytes
+2024/12/10-19:08:30.060 543e compacted to: files[ 0 0 1 0 0 0 0 ]
+2024/12/10-19:08:30.060 543e Delete type=2 #201
+2024/12/10-19:08:30.060 543e Delete type=2 #204
+2024/12/10-19:17:34.021 543e Level-0 table #207: started
+2024/12/10-19:17:34.035 543e Level-0 table #207: 3495862 bytes OK
+2024/12/10-19:17:34.040 543e Delete type=0 #203
+2024/12/10-19:38:43.885 543e Level-0 table #209: started
+2024/12/10-19:38:43.914 543e Level-0 table #209: 3429328 bytes OK
+2024/12/10-19:38:43.919 543e Delete type=0 #206
+2024/12/10-19:57:22.967 543e Compacting 1@0 + 1@1 files
+2024/12/10-19:57:22.988 543e Generated table #210@0: 1464 keys, 59270 bytes
+2024/12/10-19:57:22.988 543e Compacted 1@0 + 1@1 files => 59270 bytes
+2024/12/10-19:57:22.992 543e compacted to: files[ 0 1 1 0 0 0 0 ]
+2024/12/10-19:57:22.993 543e Delete type=2 #207
+2024/12/10-19:57:22.993 543e Delete type=2 #209

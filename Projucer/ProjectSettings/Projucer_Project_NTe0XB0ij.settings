@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PROPERTIES>
+  <VALUE name="projectWindowPos" val="1148 1082 1143 1412"/>
+  <VALUE name="lastDocs">
+    <RECENT_DOCUMENTS>
+      <PREVIOUS>
+        <DOC file="/home/rw/dev/juce/JUCE/extras/AudioPluginHost/Source/Plugins/ARAPlugin.h"
+             state="0:0:0"/>
+        <DOC file="/home/rw/dev/juce/JUCE/extras/AudioPluginHost/Source/Plugins/InternalPlugins.cpp"
+             state="0:0:0"/>
+        <DOC file="/home/rw/dev/juce/JUCE/extras/AudioPluginHost/Source/Plugins/InternalPlugins.h"
+             state="0:0:0"/>
+        <DOC file="/home/rw/dev/juce/JUCE/extras/AudioPluginHost/Source/Plugins/ARAPlugin.h"
+             state="0:0:0"/>
+      </PREVIOUS>
+      <NEXT/>
+    </RECENT_DOCUMENTS>
+  </VALUE>
+  <VALUE name="fileTreeState">
+    <OPEN id="YdWL7hi7p" scrollPos="0">
+      <SELECTED id="/YdWL7hi7p/{CFED5B3D-D1D8-0F3F-4D67-B2A810D057EF}/{6F257CD6-CE86-9BBC-54C1-45E43249E414}/MV6AI1"/>
+    </OPEN>
+  </VALUE>
+  <VALUE name="moduleTreeState">
+    <OPEN id="modules" scrollPos="0"/>
+  </VALUE>
+  <VALUE name="exportersTreeState">
+    <OPEN id="exporters" scrollPos="0"/>
+  </VALUE>
+</PROPERTIES>

@@ -1,100 +1,100 @@
-logEqv2 phi1 form3
-logEqv2 phi1 psi1
-logEqv phi1 psi1
-:l prime
-myfunc [a,b,c] [1,2,3]
-:l prime
-:l prime'
-contr2 (\_ _ -> False)
-:l prime
-contr1 (\_ -> False)
-:l prime
-logEqv1 (\p -> p && not p) (\_ -> False)
-|logEqv1 (\p -> p && not p) (\_ -> False)
-logEqv1 (\p -> excludedMiddle p) (\p -> True)
---logEqv1 (\p -> excludedMiddle p) (\p -> True)
-logEqv1 (\p -> p || False) (\p -> p)
-logEqv1 (\p -> p && True) (\p -> p)
-logEqv1 (\p -> p || True) (\p -> True)
-logEqv1 (\p -> p ==> False) (\p -> not p)
-logEqv1 (\_ -> not True) (\_ -> False)
-logEqv1 (\_ -> not True) False
-false'
-false' = not True
-:t form5
-:t valid2
-valid2 form5
-:l prime
-logEqv2 form3 form4
-valid2 form4
-valid2 form3
-valid form4
-:l prime
-valid2 form2
-valid2 form1
-:l prime
-valid1 excludedMiddle
-:l prime
-blowup "pie"
-:l prime
-xor False False
-xor 
-xor False True
-xor True False
-xor True True
-:l prime
-:l prime
-:l prime
-take 5000 primes0
-take 5000 primes1
-:l prime
-take 5000 primes0
-take 5000 primes1
-:l prime
-take 5000 primes1
-take 5000 primes0
-take 5000 filter primes0
-take 5000 primes1
-:l prime
-leastDivisorP 2923
-leastDivisorP 3923
-leastDivisorP 3920
-:t leastDivisorP
-srtString "Cameron Collard"
-take 4 primes0
-srtString "cameron collard"
-:l prime
-take 190 allPrimes 
-take 90 allPrimes 
-take 50 allPrimes 
-leastDivisorP 563
-leastDivisorP 565
-leastDivisorP 567
-leastDivisorP 568
-leastDivisorP 569
-leastDivisorP 560
-sumLengths [[1,2],[]]
-take 3 allPrimes
-:l prime
-take 4 allPrimes
-maxx [1,2,3]
-:l prime
-gg
-toys
-toys = "in the attic"
-1 + 2
-wtf
-take 5 allPrimes
-:l prime
-:l prime
-factors 12
-factors 12
-take 4 allPrimes
-leastDivisor 12
-leastDivisor 12
-leastDivisor12
-:l prime
-leastDivisor 12
-:l prime
-leastDivisor 12
-leastDivisor 1234
+let 
+:t foldr
+:reload
+:reload
+:reload
+:reload
+:reload
+:reload
+:reload
+:reload
+:reload
+:reload
+:reload
+:reload
+:reload
+:reload
+:reload
+:reload
+:reload
+:reload
+:reload
+:reload
+sortSublistByLen [[1],[2,2],[3,3,3]]
+sortSublistByLen [[1],[2,2],[3,3,3]]
+:reload
+:reload
+:reload
+:reload
+:reload
+:reload
+:reload
+:reload
+:reload
+:reload
+:reload
+:reload
+:reload
+mirror "dralloc"
+mirror dralloc
+:reload
+:reload
+:reload
+:reload
+:reload
+:reload
+:reload
+:relaod
+mean [1,2,2,3]
+mean [1,2,3,4]
+:reload
+length ""
+length [2,3,4]
+length [a,b,c]
+len [1,2,3]
+len []
+len "a"
+"1"
+len ""
+len "spock"
+:reload
+:reload
+:reload
+:reload
+:t t
+let t = MTree Nothing Nothing 1
+:t t
+let t = MTree 
+:t t
+let t = MTree 1 Nothing Nothing
+:reload
+:t Maybe 12
+:t Maybe
+:reload
+:reload
+:reload
+:reload
+:load realworld.hs 
+:load realworld.hs 
+:load realworld.hs 
+:load realworld.hs 
+:load realworld.hs 
+toList l
+let l = Cons 'a' (Cons 'b' Nil)
+:load realworld.hs 
+toList l
+let l = Cons 'a' (Cons 'b' Nil)
+:load realworld.hs 
+:load realworld.hs 
+toList l
+let l = Cons 'a' (Cons 'b' Nil)
+:load realworld.hs 
+toList l
+let l = Cons 'a' (Cons 'b' Nil)
+let l = Cons 'a' (Cons 'b' 'c')
+:load realworld.hs 
+:load realworld.hs 
+:load realworld.hs 
+:load realworld.hs 
+lastButOne [1]
+lastButOne [1,2]

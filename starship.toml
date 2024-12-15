@@ -1,0 +1,283 @@
+[aws]
+symbol = "  "
+format = '[$symbol($profile )(\($region\) )(\[$duration\] )]'
+
+[[battery.display]]
+threshhold = 98
+
+[buf]
+symbol = " "
+format = '[$symbol($version) ]($style)'
+version_format = '${raw}'
+
+[c]
+symbol = ' '
+format = '[$symbol($version) ]($style)'
+version_format = '${raw}'
+
+[character]
+success_symbol = '[](fg:#e90020)'
+error_symbol = '[](fg:#02e8fb)'
+
+[cmake]
+format = '[$symbol($version )]($style)'
+version_format = '${raw}'
+
+[cmd_duration]
+min_time = 2
+show_milliseconds = true
+format = '[$duration ]($style)'
+style = 'purple'
+
+[conda]
+symbol = " "
+format = '[$symbol$environment ]($style)'
+version_format = '${raw}'
+
+[container]
+symbol = '󰨾 '
+format = '[$symbol \[$name\] ]($style)'
+
+[crystal]
+symbol = " "
+format = '[$symbol($version) ]($style)'
+version_format = '${raw}'
+
+[dart]
+symbol = " "
+format = '[$symbol($version) ]($style)'
+version_format = '${raw}'
+
+[deno]
+symbol = ' '
+format = '[$symbol($version) ]($style)'
+version_format = '${raw}'
+
+[directory]
+fish_style_pwd_dir_length = 1
+style = '#e90020'
+read_only = " 󰌾"
+
+[docker_context]
+symbol = " "
+format = '[$symbol($context) ]($style)'
+
+[elixir]
+symbol = " "
+format = '[$symbol($version) ]($style)'
+version_format = '${raw}'
+
+[elm]
+symbol = " "
+format = '[$symbol($version) ]($style)'
+version_format = '${raw}'
+
+[fennel]
+symbol = " "
+format = '[$symbol($version) ]($style)'
+version_format = '${raw}'
+
+[git_branch]
+symbol = " "
+format = '[$symbol$branch(:$remote_branch) ](green)'
+
+[git_commit]
+disabled = true
+
+[git_status]
+style = '#0cf260'
+
+[gleam]
+symbol = ' '
+format = '[$symbol($version) ]($style)'
+version_format = '${raw}'
+
+[golang]
+symbol = " "
+format = '[$symbol($version) ]($style)'
+version_format = '${raw}'
+
+[guix_shell]
+symbol = " "
+format = '[$symbol($version) ]($style)'
+
+[haskell]
+symbol = " "
+format = '[$symbol($version) ]($style)'
+version_format = '${raw}'
+
+[haxe]
+symbol = " "
+format = '[$symbol($version) ]($style)'
+version_format = '${raw}'
+
+[hg_branch]
+symbol = " "
+format = '[$symbol($version) ]($style)'
+
+[hostname]
+ssh_symbol = " "
+format = '[$ssh_symbol$hostname) ]($style)'
+
+[java]
+symbol = " "
+format = '[$symbol($version) ]($style)'
+version_format = '${raw}'
+
+[jobs]
+symbol = ' '
+
+[julia]
+symbol = " "
+format = '[$symbol($version) ]($style)'
+version_format = '${raw}'
+
+[kotlin]
+symbol = " "
+format = '[$symbol($version) ]($style)'
+version_format = '${raw}'
+
+[line_break]
+disabled = true
+
+[lua]
+symbol = ' '
+format = '[$symbol($version) ](#1a5cfd)'
+version_format = '${raw}'
+
+[memory_usage]
+symbol = "󰍛 "
+format = '[$symbol($ram(${swap})) ]($style)'
+
+[meson]
+symbol = "󰔷 "
+format = '[$symbol($version) ]($style)'
+version_format = '${raw}'
+
+[nim]
+symbol = "󰆥 "
+format = '[$symbol($version) ]'
+version_format = '${raw}'
+
+[nix_shell]
+symbol = " "
+format = '[$symbol($version) ]'
+
+[nodejs]
+symbol = " "
+format = '[$symbol($version) ]($style)'
+version_format = '${raw}'
+
+[ocaml]
+symbol = " "
+format = '[$symbol($version) ]($style)'
+version_format = '${raw}'
+
+[perl]
+symbol = " "
+format = '[$symbol($version) ]($style)'
+version_format = '${raw}'
+
+[php]
+symbol = " "
+format = '[$symbol($version) ]($style)'
+version_format = '${raw}'
+
+[pijul_channel]
+symbol = " "
+format = '[$symbol($version) ]($style)'
+version_format = '${raw}'
+
+[package]
+symbol = ' '
+version_format = '${raw}'
+format = '[$symbol$version ](yellow)'
+
+[python]
+symbol = " "
+version_format = '${raw}'
+
+[rlang]
+symbol = "󰟔 "
+format = '[$symbol($version) ]($style)'
+version_format = '${raw}'
+
+[ruby]
+symbol = " "
+format = '[$symbol($version) ]($style)'
+version_format = '${raw}'
+
+[rust]
+format = '[$symbol($version) ](#cf4c00)'
+symbol = ' '
+version_format = '${raw}'
+
+[scala]
+symbol = " "
+format = '[$symbol($version) ]($style)'
+version_format = '${raw}'
+
+[shell]
+disabled = false
+zsh_indicator = ' '
+nu_indicator = '󰯉'
+bash_indicator = ' '
+style = '#e90020'
+
+[status]
+disabled = false
+
+[swift]
+symbol = " "
+format = '[$symbol($version) ]($style)'
+version_format = '${raw}'
+
+[zig]
+symbol = " "
+format = '[$symbol($version) ]($style)'
+version_format = '${raw}'
+
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+AlmaLinux = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Kali = " "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+RockyLinux = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Void = " "
+Windows = "󰍲 "

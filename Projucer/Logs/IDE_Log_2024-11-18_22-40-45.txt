@@ -1,0 +1,10 @@
+
+**********************************************************
+Projucer 7.0.12  ---  Build date: Apr 23 2024
+Log started: 18 Nov 2024 10:40:45pm
+
+Linux
+CPU: 3500MHz  Cores: 12  64217MB
+Loading project: /home/rw/dev/juce/DeltaSigma/DeltaSigma.jucer
+Loading project: /home/rw/dev/juce/JUCE/extras/AudioPluginHost/AudioPluginHost.jucer
+Shutdown

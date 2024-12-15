@@ -1,0 +1,3 @@
+[character]
+success_symbol = '[󰯉](fg:#e90020)'
+error_symbol = '[](fg:#02e8fb)'

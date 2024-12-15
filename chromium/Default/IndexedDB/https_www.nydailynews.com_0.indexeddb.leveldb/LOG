@@ -1,0 +1,6 @@
+2024/12/09-19:57:57.227 2112 Creating DB /home/rw/.config/chromium/Default/IndexedDB/https_www.nydailynews.com_0.indexeddb.leveldb since it was missing.
+2024/12/09-19:57:57.233 2112 Reusing MANIFEST /home/rw/.config/chromium/Default/IndexedDB/https_www.nydailynews.com_0.indexeddb.leveldb/MANIFEST-000001
+2024/12/09-19:58:56.560 2113 Level-0 table #5: started
+2024/12/09-19:58:56.564 2113 Level-0 table #5: 8904 bytes OK
+2024/12/09-19:58:56.569 2113 Delete type=0 #3
+2024/12/09-19:58:56.569 2113 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

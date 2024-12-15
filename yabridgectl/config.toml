@@ -7,5 +7,5 @@ no_verify = false
 blacklist = []
 
 [last_known_config]
-wine_version = 'wine-8.18 (Staging)'
-yabridge_host_hash = -3455544459850266564
+wine_version = 'wine-9.22 (Staging)'
+yabridge_host_hash = 7742505165074386169

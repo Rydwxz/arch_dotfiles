@@ -1,0 +1,2228 @@
+ls
+~
+ls
+ls -a
+xxxxxxxxxx
+man archwikiman
+man mv
+quit
+exit
+~/.config/nushell/
+nvim
+sysus
+sysus 
+nano
+vim
+vi
+../nvim/
+nvim
+open localhost::8080/health
+http get localhost::8080/health
+http get localhost:8080/health
+http get 127.0.0.1:8080/health
+http get https://127.0.0.1:8080/health
+http get archlinux.org
+http get https://archlinux.org
+http get http://127.0.0.1:8080/health
+http get http://127.0.0.1:8080
+nvim /var/log/pacman.log
+../nushell
+nvim
+exit
+http get https://nushell.sh/book/configuration.html#remove-welcome-message
+exit
+nushell/
+nvim
+nvim
+yay -Ss starship
+yay -S starship
+exit
+../
+ls
+yay -Ss starship
+exit
+http get http://127.0.0.1:8080/health
+exit
+.config/
+touch starship.toml
+exit
+wezterm /
+wezterm/
+nvim
+exit
+../
+.config/
+rw/
+.config/
+wezterm/d
+cd wezterm
+nvim
+~/dev/nv/bhs
+nvim
+~/dev/tui
+jade/
+ls
+ls src
+~/dev/nv/bhs
+nvim
+nvim
+~/dev/tui/jade
+~
+.config/
+~/dev/tui/jade/
+~/temp/dict/puns/help/moss/burn
+~/.config/wezterm/
+nvim
+/usr
+~/.config/wezterm/
+~/.config/nvim
+~/dev/tui/jade/
+.config/starship.toml
+.config/
+asdf
+nvim --manbearpig
+lazygit
+nvim starship.toml
+nvim
+nvim starship.toml
+sysus
+nvim
+src/
+ls
+mv [file.rs theme.rs] ../ 
+mv file.rs ../
+mv theme.rs ../
+starship.toml
+~/dev/tui/jade/
+exit
+sysus
+nvim starship.toml
+.config/
+nvim starship.toml
+.config/
+nvim starship.toml
+exit
+.config/
+nvim ~/.zshrc
+exit
+nvim .config/nushell/
+.config/
+exit
+nvim .config/nushell/
+exit
+nvim .config/nushell/
+exit
+nvim .config/nushell/
+nvim .config/nushell/config.nu
+exit
+nvim .config/nushell/config.nu
+exit
+nvim .config/nushell/config.nu
+exit
+.config/
+ls -alsdD
+../.
+nvim .config/nushell/config.nu
+exit
+ls -alsdD
+ls -alsd
+ls -als
+.config/
+exit
+ls | grid -c
+dev/
+smi
+smi/
+smidb
+smidb/
+nvim ~/.config/starship.toml
+exit
+dev/smi/smidb
+dev
+dev/
+smi/
+smidb/
+ls | grid -c
+ls
+ls | grid --color
+ls | grid -ci
+ls -a
+ls -l
+ls -s
+ls
+.config/
+eza
+nvim starship.toml
+exit
+nvim .config/starship.toml
+exit
+nvim .config/starship.toml
+exit
+bash
+dev/nv/bhs
+dev/nv/bhs/
+nvim
+~
+.config/
+~/dev
+../
+dev
+dev/nv
+~/dev
+dev
+./dev
+../
+dev
+/dev
+~
+dev/
+../
+usb
+dev/nv
+tmp
+./tmp
+../
+~/tmp
+/tmp
+~/dev/nv/bhs
+nvim
+sysus
+nvim
+~/.config/nvim
+nvim
+~/dev/nv/bhs
+nvim
+~/dev/tui/jade/target/debug/jade
+sysus
+env
+env | rg "USER"
+env | rg "USERNAME"
+sysus
+man ls
+ls
+help ls
+help ls -a
+help 
+help help
+help sort
+~/.config/nushell/
+nvim
+help sortby
+help sort-by
+sysus
+help operators
+../nvim/lua/plugins/txt-obj/
+ls
+share/
+ls
+../
+/
+etc
+etc/
+systemd/
+user/
+../../../
+etc/
+lvm/
+cargo test
+help ps
+ps
+help ps
+ps | where name =~ 'fire'
+$env.USER
+"rw" == $env.USER
+ps -l
+nvim nu.nu
+ls
+dl nu.nu
+ls
+plugin list
+fzf
+ls | where name == 'nu'
+~
+ls
+nushell/
+ls $env.PACKAGE_ROOT
+~
+fzf
+../../
+fzf
+$env.NU_LIB_DIRS
+ls .config/nushell/scripts
+ls .config/nushell/scripts/
+ls ./.config/nushell/scripts/
+.config/
+ls
+nushell/
+mkdir scripts
+scripts/
+mkdir themes
+themes/
+~/.local/share/nushell
+~/.local/share/nushell/
+cd ~/.local/share
+nushell/
+zsd
+zsh
+man curl
+~/.config/nushell/
+gcgh nushell/nu_scripts
+git clone github.com/nushell/nu_scripts
+git clone https://github.com/nushell/nu_scripts
+exit
+.config/nushell/
+ls
+nu_scripts
+nu_scripts/
+ls
+.config/nushell/nu_scripts/
+ls
+themes/
+ls
+ls nu-themes
+.config/nushell/nu_scripts/
+ls
+ls themes
+ls themes/nu-themes | where name "source*"
+ls themes/nu-themes | where name "source"
+help operators
+ls themes/nu-themes | where "source" in name
+ls themes/nu-themes | where name in "source"
+ls themes/nu-themes | where name in "darc"
+ls themes/nu-themes | where name in "darcula"
+ls themes/nu-themes
+ls themes/nu-themes | where name in "ayu"
+help where
+help contains
+ls themes/nu-themes | where name =~ 'source'
+themes/
+nu-themes/
+ls | where name == 'nu'
+ls | where name =~ 'source'
+exit
+ls
+nvim source-code-x.nu
+ls
+.config/nushell/nu_scripts/themes/nu-themes/
+ls
+.config/nushell/nu_scripts/themes/nu-themes/
+ls
+.config/nushell/nu_scripts/themes/nu-themes/
+ls
+.config/nushell/nu_scripts/themes/nu-themes/
+ls
+.config/
+ls
+.config/nushell/
+ls
+.config/nushell/
+ls
+.config/nushell/
+ls
+.config/nushell/
+ls
+.config/nushell/
+ls
+.config/nushell/
+ls
+.config/nushell/
+ls
+~/.config/nushell/
+.config/nushell/nu_scripts/themes/nu-themes/
+ls
+.config/nushell/nu_scripts/themes/nu-themes/
+ls
+.config/nushell/nu_scripts/themes/nu-themes/
+ls
+.config/nushell/nu_scripts/themes/nu-themes/
+ls
+.config/nushell/nu_scripts/themes/nu-themes/
+ls
+.config/nushell/nu_scripts/themes/nu-themes/
+ls
+help =~
+.config/nushell/nu_scripts/themes/nu-themes/
+ls
+.config/nushell/nu_scripts/themes/nu-themes/
+ls
+.config/nushell/nu_scripts/themes/nu-themes/
+ls
+.config/nushell/nu_scripts/themes/nu-themes/
+ls
+.config/
+ls
+.config/
+ls
+.config/
+ls
+.co
+ls
+.config/
+ls
+.config/
+help man
+help help
+ls
+~/.config 
+~/.config/
+ls
+../../../
+../
+ls
+'string' "string"
+'string'
+ls
+nvim .config/nushell/config.nu
+nvim
+nvim
+nvim .config/nushell/config.nu
+yay -Ss zoxide
+yay -S zoxide
+nvim .config/nushell/config.nu
+z .config/nvim/lua/plugins
+.config/
+~/.config/
+z ~/.config
+z .config/nvim/lua/plugins
+ls
+z .config/nushell
+z ~/.config/nushell
+help grid
+../
+nvim ~/.zshrc
+eza
+eza -a
+eza -a --icons
+nvim nu_scripts/themes/nu-themes/freaky-cherry.nu
+exa -a --icons
+yay -Qs eza
+yay -Qs exa
+ls
+../
+nu-themes/
+z
+zi
+z nvim
+z ~/.config/nvim
+~
+z nvim
+~
+z plugins
+~
+z ~/dev/nv/bhs
+~
+z bhs
+~
+~/dev/tui/jade
+~
+z jade
+yay -S tldr
+tldr pacman
+yay -Qs fs
+yay -Qs fd
+yay -S tokei
+sysus
+ls
+nvim
+zsh
+nvim
+exit
+nvim
+nvim
+.config/nushell/
+nvim
+~
+enter .config/nushell/
+shells
+enter ~/.ssh
+shells
+z ssh
+p
+shells
+n
+shells
+2p
+exit
+shells
+enter .config/wezterm/
+ls -l
+dexit
+e
+enter 
+dexit
+shells
+lsg
+z nushell
+ls
+shells
+~
+../jade
+nvim
+cargo run
+z nvim
+nvim'<\n>'
+nvim
+z plugins
+z bhs
+nvim
+sysus
+ls
+eza -al
+sysus
+nvim
+nvim
+z bhs
+nvim
+z dev/
+git clone https://github.com/8bitmcu/NerdFont-Cheat-Sheet
+z NerdFont-Cheat-Sheet/
+nvim
+nvim
+sysus
+mupdf RustWebProgramming.pdf
+../func
+cargo run
+sysus
+nvim
+cargo run
+cargo test
+cargo run
+sysus
+cargo run
+../ratatui/examples/
+cargo run
+../../
+./tui/jade/target/debug/jade
+ls tui/jade/target
+../../jade/
+../../
+ls tui/jade/target
+ls tui/jade/target/debug
+cargo run
+./target/debug/jade
+../
+./jade/target/debug/jade
+jade
+jade/
+target/debug/jade
+cargo run
+../
+jade/target/debug/jade
+jade
+jade/
+cargo test
+btop
+cargo run
+../
+ls
+git clone https://github.com/sayanarijit/xplr
+xplr/
+nvim
+../
+dl xplr
+../
+gcsh Rydwxz/xplr
+gcsh xplr
+nvim ~/.zshrc
+$env | table 
+$env | table -e
+ls
+xplr/
+sysus
+nvim
+nvim
+z nvim
+z dev
+z dev/tui
+sysus
+mupdf ToMockAMockingbird.pdf &
+../haskell
+z .config/nushell
+ls 
+sysus
+mupdf RealWorldHaskell.pdf &
+&
+../rust
+yay -Ss polyshell
+yay -Ss multishell
+z dev/tui
+gcgh wez/wezterm
+wezterm/
+z dev/tui
+wezterm/
+z wezterm
+tokei
+man tokei
+tokei -h
+yay -Ss metashell
+yay -Ss vish
+yay -Ss avsh
+mupdf RustWebProgramming.pdf &
+sysus
+yay -Ss infinishell
+yay -Ss 8sh
+sysus
+nvim
+nvim
+nvim > nvcfg
+nvim
+../haskell/
+../
+meta
+meta/
+zsw
+../haskell/
+sysus
+yay -S ghcup
+yay -S ghcup-hs-bin
+ghcup tui
+ghci
+.ghcup/
+bin
+bin/
+ghci
+echo PATH
+echo $PATH
+echo $env.PATH
+./ghci-9.10
+~/dev
+mkdir haskell & cd haskell
+ls
+haskell/
+ghci
+nvim
+ghci-9.10.1 
+gcgh waymonad/waymonad
+nvim waymonad
+sysus
+sysus
+ls
+waymonad
+waymonad/
+nvim
+ls
+mv `Richard Bird - Pearls of Functional Algorithm Design-Cambridge University Press (2010).pdf` PearlsOfFunctionalAlgorithmDesign
+ls
+mv PearlsOfFunctionalAlgorithmDesign PearlsOfFunctionalAlgorithmDesign.pdf
+nvim
+nvim waymonad
+nvim waymonad/src/Waymonad.hs
+nvim realworld.hs
+dev/tmp/
+../haskell/
+dev/haskell/
+z bhs
+waymonad/src/
+nvim
+///
+~/
+dev/haskell/waymonad/src/
+../
+nvim realworld.hs
+nvim
+nvim
+sysus
+nvim waymonad/src/Waymonad.hs
+~/dev/haskell/waymonad/src/
+nvim
+z bhs
+z haskell
+nvim
+nvim
+z haskell
+z bhs
+nvim waymonad/src/Waymonad.hs
+nvim
+sysus
+../
+rust
+rust/
+z ref/rust
+z ref
+z ~/doc/ref/cs/
+z rust/
+firefox RustBrainTeasers.pdf
+nvim
+mkdir rwh
+mv realworld.hs rwh/ch03.hs
+ls
+dl p70.hs
+mupdf RealWorldHaskell.pdf &
+sysus
+nvim
+mupdf RustBrainTeasers.pdf &
+ls
+ls ~/Downloads/
+../
+ls haskell
+z ~/Downloads
+z Down
+mv `(Carl Fredrik Samson - Asynchronous Programming in Rust_ Building Working Examples of Futures, Green Threads, and Runtimes-Packt (2024).pdf` ~/doc/ref/cs/rust/AsynchronousProgrammingInRust.pdf
+~/doc/ref/cs
+mv `(Dover Books on Mathematics) Haskell B. Curry - Foundations of Mathematical Logic-Dover Publications (2010).pdf` ~/doc/ref/cs/func/FoundationsOfMathematicalLogic.pdf
+mv `(Studies in Logic and the Foundations of Mathematics 22) Haskell Brooks Curry, Robert Feys, William Craig - Combinatory Logic, Volume I-North-Holland Publishing Company (1958).pdf` ~/doc/ref/cs/func/StudiesInLogicAndTheFoundationsOfMathematics.pdf
+mv '(Studies in logic and the foundations of mathematics 65) [edited by] Haskell B. Curry, J. Roger Hindley, Jonathan P. Seldin. - Combinatory logic. _ Volume II-North-Holland Pub. Co (1972.).pdf' ~/doc/ref/cs/func/CombinatoryLogicVolII.pdf
+mv `Antoni Boucher._Daniel Durante._Guillaume Gomez._Sebastian Dröge - Rust Programming By Example-Packt Publishing (2018).pdf` ~/doc/ref/cs/rust/RustProgrammingByExample.pdf
+ls
+mv `Benjamin C. Pierce - Types and Programming Languages-The MIT Press (2002).pdf` ~/doc/ref/cs/meta/TypesAndProgrammingLanguages.pdf
+mv `Harry Katzan - APL Programming and Computer Techniques (VNR Computer Science Series) (1970).pdf` ~/doc/ref/cs/func/APLProgrammingAndComputerTechniques.pdf
+mv `Herbert Wolverson - Rust Brain Teasers_ Exercise Your Mind-Pragmatic Bookshelf (2022).pdf` ~/doc/ref/cs/rust/RustBrainTeasers.pdf
+mv `Kees Doets_ Jan van Eijck - The Haskell Road to Logic, Maths and Programming-College Publications (2012).pdf` ~/doc/ref/cs/haskell/HaskellRoadToLogicMathsAndProgramming.pdf
+mv `Ken Youens-Clark - Command-Line Rust_ A Project-Based Primer for Writing Rust CLIs-O'Reilly Media (2022).pdf` ~/doc/ref/cs/rust/CommandLineRust.pdf
+del `Monkeytype A minimalistic, customizable typing test.html`
+dl `Monkeytype A minimalistic, customizable typing test.html`
+dl `Monkeytype A minimalistic, customizable typing test_files/`
+ls
+mv `Paul Hudak - The Haskell School of Expression_ Learning Functional Programming Through Multimedia-Cambridge University Press (2010).pdf` ~/doc/ref/cs/haskell/TheHaskellSchoolOfExpression.pdf
+mv `Raymond M. Smullyan - To Mock a Mockingbird and Other Logic Puzzles_ Including an Amazing Adventure in Combinatory Logic-Knopf (1985).pdf` ~/doc/ref/cs/func/ToMockAMockingbird.pdf
+mv `Richard Bird - Pearls of Functional Algorithm Design-Cambridge University Press (2010).pdf` ~/doc/ref/cs/func/PearlsOfFunctionalAlgorithmDesign.pdf
+mv `Stephen Diehl - Implement an imperative language compiler in Haskell using LLVM-web draft (2017).pdf` ~/doc/ref/cs/meta/ImplementAnImperativeLanguageInHaskellUsingLLVM.pdf
+mv even-higher-order-functions-for-parsing-or-why-would-anyone-ever-want-to-use-a-sixth-order-function.pdf ~/doc/ref/cs/meta/
+ls
+rust/
+z Down
+mv `Martin Kleppmann - Designing Data-Intensive Applications_ The Big Ideas Behind Reliable, Scalable, and Maintainable Systems-O’Reilly Media (2017).pdf` ~/doc/ref/cs/DesigningDataIntensiveApplications.pdf
+nvim
+z smi
+~/dev/smi
+smidb
+smidb/
+nvim
+z xplr
+nvim
+../../
+z waymonad
+nvim
+z xplr
+nvim
+z waymonad
+nvim
+nvim
+~/usr/src/
+llamacpp/
+nvim convert-hf-to-gguf.py
+z bhs
+z nvim
+nvim
+z jade
+nvim
+nvim
+nvim
+nvim
+../sway
+z bhs
+nvim
+nvim
+yay
+../i3
+nvim
+nvim ~/.xinitrc
+../sway
+nvim
+poweroff
+z xplr
+z nvim
+nvim
+z waymonad
+nvim
+nvim
+z jade
+nvim
+z waymonad
+nvim
+z xplr
+nvim
+sysus
+nvim 
+ls
+nvim
+nvim test
+../../vst/soc
+z bhs
+nvim
+nvim
+z rust
+mupdf AsynchronousProgrammingInRust.pdf
+ls
+mupdf CompleteRustProgrammingGuide.pdf
+mv CompleteRustProgrammingGuide.pdf CompleteRustProgrammingReference.pdf
+sysus
+nvim
+z sway
+nvim
+z i3
+nvim
+xrandr --output DP-D --rotate right
+xrandr --output DP-3 --rotate right
+xrandr --output DP-3 --rotate left
+xrandr --output DP-3 --rotate normal
+xrandr --output DP-3 --rotate right
+nvim
+z xplr
+z .config
+ls
+ls | grep feh
+nvim ~/.xinitrc
+logout
+exit
+logout
+nvim
+mupdf TheAsyncRustBook.pdf
+nvim ~/.xinitrc
+xrandr
+1920/2
+1920 / 2
+1440 - 1080
+3440 - 1920
+3440 - 1520
+nvim ~/.xinitrc
+z xplr
+nvim
+z jade
+z xplr
+nvim
+z xplr
+nvim
+xrandr
+z xplr
+z rust/
+z doc/ref/cs/rust
+nvim
+z xplr
+sysus
+z soc
+nvim
+nvim
+yay -Qs 
+yay -Qs io
+man pacman
+tokei -h
+tokei
+nvim /var/log/pacman.log
+z nvim
+nvim
+lua/
+nvim
+z bhs
+z xplr
+nvim
+z bhs
+nvim
+nvim
+sysus
+xrandr
+z xplr
+xrander
+xrandr
+nvim
+z xplr
+nvim
+~
+fzf
+nvim /usr/include/freetype2/freetype/config/
+z nvim/lus
+z nvim/lua
+nvim
+z nvim/lua
+nvim
+nvim /usr/include/freetype2/freetype/config/
+nano
+yay -S nano
+nano /usr/include/freetype2/freetype/config/
+nano /usr/include/freetype2/freetype/config/ftoption.h
+man fonts-conf
+~/.config/fontconfig
+z .config
+mkdir fontconfig
+z nvim/lua
+nvim
+ln -s /usr/share/fontconfig/conf.avail/50-user.conf ~/.config/fontconfig/
+nvim fontconfig
+reboot
+z xplr
+nvim
+sysus
+nvim /usr/include/freetype2/freetype/config/
+sudo nano /usr/include/freetype2/freetype/config/ftoption.h
+reboot
+nvim .config/fontconfig
+z font
+ls
+~
+z fonconfig
+z fontconfig
+z .config/fontconfig
+nvim
+z bhs
+nvim
+z fontc
+nvim
+z bhs
+nvim
+z fontc
+z xplr
+nvim
+z xplr
+xrandr -q
+nvim
+nvim ~/.xinitrc
+man xrandr
+yay
+reboot
+nvim ~/.xinitrc
+nvim .config/fontconfig/fonts.conf
+nvim ~/.xinitrc
+ls .config
+z .config/sway
+nvim ~/.xinitrc
+z i3
+nvim
+nvim ~/.zprofile
+nvim
+.config
+z sway
+yay -Ss swaybg
+yay -Qs swaybg
+yay -S swaybg
+man sway
+yay -Qs way
+yay -Ss waycopy
+yay -S wayclip-git
+man libinput
+libinput 4
+4 libinput
+man 4 libinput
+z bhs
+z xplr
+nvim
+nvim
+swaymsg -t get_inputs
+nvim
+nvim ~/.zprofile
+sysus
+z xplr
+nvim
+../../
+&/
+ls
+../
+dl &/
+ls
+game/
+bas/
+nvim 
+-
+../
+bat/
+nvim 
+../
+dl bas/
+mr/
+nvim
+../
+dl mr/
+cargo new mr
+mr/
+nvim
+mr/
+../
+gcgh StarArawn/bevy_ecs_tilemap
+mv bevy_ecs_tilemap/ btm/
+btm/
+dev/game/btm
+dev/game/btm/
+cargo run --release --example basic
+nvim
+../bevy
+cargo run --example bounding_2d
+cargo run --example custom_gltf_vertex_attribute
+z bhs
+nvim
+cargo run --example mesh2d
+cargo run --example mesh2d_arcs
+z dev/game/bevy/examples
+nvim
+yay -Ss mush
+cargo run --release --example 2d_viewport_to_world
+z exam
+cargo run --release --example 2d_viewport_to_world
+xrander --output DP-3 --transform right
+xrandr --output DP-3 --transform right
+xrandr --output DP-3 --rotate right
+xrandr --output DP-3 --rotate normal
+dev/
+mkdir comp/
+comp/
+gcgh hyprland-rs/hyprland-rs
+hyprland-rs/
+nvim
+../
+dl hyprland-rs/
+yay -S hyprland
+cargo run --release --example move_sprite
+cargo run --release --example pixel_grid_snap
+nvim
+sysus
+z linux
+z doc/ref/cs/linux
+mv `~/Downloads/Jan Newmarch - Linux Sound Programming-Apress (2017).pdf` ./LinuxSoundProgramming.pdf
+mupdf `A tutorial on using the ALSA Audio API.html`
+ls
+dl `A tutorial on using the ALSA Audio API.html`
+ls
+sysus
+z usr/sh
+z ~/usr/sh
+ls /bin | grep "nu"
+ls
+../
+audio
+audio/
+mupdf LinuxSoundProgramming.pdf
+../rust/
+mupdf `Richard G. Lyons - Understanding Digital Signal Processing-Pearson Education (1996).pdf`
+ls
+dl `Richard G. Lyons - Understanding Digital Signal Processing-Pearson Education (1996).pdf`
+ls
+xplr
+yazi
+mupdf `Richard G. Lyons - Understanding Digital Signal Processing-Prentice Hall (2010).pdf`
+mupdf `Udo Zölzer - Digital Audio Signal Processing-Wiley (2008).pdf`
+mupdf LittleBookofRustMacros.pdf
+../../audio
+mupdf `Richard G. Lyons - Understanding Digital Signal Processing-Prentice Hall (2010).pdf`
+ls
+z ~/tmp
+ls
+touch "a test .pdf"
+ls
+ls | select name 
+ls | select name | filter str contains ' '
+touch btest.pdf
+ls
+ls | select name 
+ls | select name | filter {||str contains ' '}
+ls | select name | filter {|| contains ' '}
+ls | select name | into string | filter {|| contains ' '}
+ls | select name | into string | filter {|| str contains ' '}
+help to nuon
+z nushell
+nvim
+ls -s
+ls | where name !~ ' '
+ls | where name ~= ' '
+ls | where name =~ ' '
+ls | where name =~ ' ' | path basename
+ls | where name =~ ' ' | select name
+ls | where name =~ ' ' | get name
+def "spacenames" [] { ls | where name =~ ' ' | get name }
+spacenames
+def spacenames [] { ls | where name =~ ' ' | get name }
+spacenames
+"a test .pdf" | split chars
+"a test .pdf" | kebab-case
+"a test .pdf" | str kebab-case
+"a test .pdf" | str trim ' '
+"a test .pdf" | str trim -c ' '
+"a test .pdf" | str replace ' ' '_'
+"a test .pdf" | str replace -a ' ' '_'
+def rs [] { $in | str replace -a ' ' '_' }
+rs "a test book.pdf"
+def rs [in] { $in | str replace -a ' ' '_' }
+def rs [strinput] { $strinput | str replace -a ' ' '_' }
+rs "a test book.pdf"
+def rs [] { $in | str replace -a ' ' '_' }
+rs "a test book.pdf"
+ls
+$filename = "a test book.pdf"
+filename = "a test book.pdf"
+def filename = "a test book.pdf"
+let filename = "a test book.pdf"
+ls
+touch $filename
+ls
+mv $filename (rs $filename)
+let newname = rs $filename
+def rs [strinput] { $strinput | str replace -a ' ' '_' }
+let newname = rs $filename
+mv $filename $newname
+ls
+spacerase
+nvim spacerase
+chmod +x spacerase
+ls
+nvim spacerase
+spacerase
+ls
+spacerase
+z audio
+spacerase
+ls
+nvim spacerase
+z rust
+z linux
+spacerase
+ls
+z Down
+dl `RICHARD G.LYONS - Understanding Digital Signal Processing-John Wiley & Sons Inc (2003).pdf`
+spacerase
+dl `RICHARD_G.LYONS_-_Understanding_Digital_Signal_Processing-John_Wiley_&_Sons_Inc_(2003).pdf`
+dl RICHARD_G.LYONS_-_Understanding_Digital_Signal_Processing-John_Wiley_&_Sons_Inc_(2003).pdf
+yazi
+z audio
+mupdf `Richard_G._Lyons_-_Understanding_Digital_Signal_Processing-Prentice_Hall_(2010).pdf`
+mv `Richard_G._Lyons_-_Understanding_Digital_Signal_Processing-Prentice_Hall_(2010).pdf` UnderstandingDigitalSignalProcessing.pdf
+mupdf TheAsyncRustBook.pdf
+-1 ^ 2
+-1 ** 2
+2 ** 2
+-1 ** 3
+-1 ** 5
+-1 ** 4
+def sum [n] { for m in 0..n { (-1 ** $n) * (1 / (2 * $n + 1))}}
+4 * sum 100
+4 * (sum 100)
+def sum [n] { let r = 0; for m in 0..n { r = (-1 ** $n) * (1 / (2 * $n + 1))}}
+def sum [n] { let r = 0; for m in 0..n { $r = (-1 ** $n) * (1 / (2 * $n + 1))}}
+def sum [n] { let mut r = 0; for m in 0..n { $r = (-1 ** $n) * (1 / (2 * $n + 1))}}
+def sum [n] { var r = 0; for m in 0..n { $r = (-1 ** $n) * (1 / (2 * $n + 1))}}
+def sum [n] { mut r = 0; for m in 0..$n { $r = (-1 ** $n) * (1 / (2 * $n + 1))};r}
+sum 100
+def sum [n] { mut r = 0; for m in 0..$n { $r = (-1 ** $n) * (1 / (2 * $n + 1))};$r}
+sum 100
+def pi [] { 4 * (sum 100) }
+pi
+def sum [n] { mut r = 0; for m in 0..$n { $r += (-1 ** $n) * (1 / (2 * $n + 1))};$r}
+pi
+def pi [] { 4 * (sum 100) }
+pi
+def sum [n] { mut r = 0; for m in 0..$n { $r += (-1 ** $m) * (1 / (2 * $m + 1))};$r}
+def pi [] { 4 * (sum 100) }
+pi
+def pi [] { 4 * (sum 1000) }
+pi
+def pi [] { 4 * (sum 100000) }
+pi
+def pi [] { 4 * (sum 100) }
+pi
+tmp/
+dl ./*
+ls
+rm ./*
+ls
+source tmp.nu
+fib 2
+fib 12
+fib 1
+fib 0
+fib 3
+fib 4
+fib 5
+fib -1
+fib 0
+fib (-1)
+source tmp.nu
+fib (-1)
+nvim
+z sh
+z ~/usr/sh
+ls
+touch 'help me'
+ls
+spacerase
+ls
+spacerase
+ls
+nvim
+tmp/
+touch "bah ah hah"
+ls
+removespace
+ls
+z nu
+z tmp
+ls
+removespace
+ls
+z tmp
+removespace
+ls
+sysus
+z sh
+z tmp
+removespace
+ls
+nvim
+nvim
+xrandr --output DP-3 --rotate right
+nvim ~/.xinitrc
+feh --bg-fill ~/.config/bg &<\n>
+z conf<\n>
+mv fehbgV.png bgv
+feh --bg-fill ~/.config/bgv
+xrandr --output DP-3 --pos 1920x0
+xrandr --output DP-2 --pos 0x2200
+mupdf UnderstandingDigitalSignalProcessing.pdf
+nvim ~/.xinitrc
+z bevy/examples
+cargo run --release --example rotation
+xrandr --output DP-2 --primary
+btop
+nvim ~/.xinitrc
+z xplr
+nvim
+yay -Ss epr
+yay -Ss epr-git
+yay -S epr-git
+sysus
+z tmp
+git clone -b template https://github.com/herluf-ba/tic-tac-tussle.git
+ls
+./tic-tac-tussle/
+nvim
+../
+dl tic-tac-tussle/
+nvim ~/.xinitrc
+sysus
+z Down
+mv `Invoice 16.pdf` Collard_Invoice_16.pdf
+xrandr --output DP-3 --rotate right
+feh --bg-fill ~/.config/bgv
+# xrandr --output DP-3 --pos 1920x0 --primary --rotate right<\n>
+xrandr --output DP-3 --pos 1920x0 --primary --rotate right<\n>
+xrandr --output DP-2 --pos 0x1800
+nvim ~/.xinitrc
+z rust
+z audio
+mupdf UnderstandingDigitalSignalProcessing.pdf
+man mupdf
+z audio
+yazi
+sysus
+nvim ~/.xinitrc
+mupdf UnderstandingDigitalSignalProcessing.pdf
+sysus
+dev/
+mkdir aoc
+aoc/
+../
+dl aoc/
+cargo new aoc
+aoc/
+cargo run
+nvim
+z aoc
+cargo run
+z nu
+z rust
+z audio
+removespace
+ls
+z audio
+removespace
+ls
+z audio
+removespace
+ls
+z audio
+removespace
+ls
+removespace
+ls
+z audio
+removespace
+ls
+yay -S polygraph
+yay -Ss polygraph
+yay -Ss polyshell
+yazi
+z yazi
+~/.config/yazi
+nvim
+yazi
+nvim
+yazi
+nvim
+yazi
+yay -S xplr
+sysus
+nvim
+sysus
+yay -Ss opencascade
+yay -S opencascade-cadquery
+yaya
+yay
+reboot
+xplr
+z .config/sway/config
+z .config/sway/
+~
+yazi
+yay -Ss lens
+yay -Ss filens
+yay -Ss vex
+yay -Ss ehx
+yay -Ss vsx
+yay -Ss vse
+yay -Ss se
+yazi
+yay -Ss vish
+yay -Ss vise
+z aoc
+cargo run
+cargo add nom
+z plu
+cargo run
+nvim
+nvim
+cargo run
+nvim
+cargo run
+sysus
+z aoc
+yay -Ss anaconda
+yay -S anaconda
+sysus
+z aoc
+z mr
+ls
+cargo run
+cargo remove crypto
+cargo add md5
+cargo run
+cr
+z nu
+cr
+cr --release
+cr
+cargo add md-5
+cr
+cr --release
+z aoc
+btop
+cr --release
+btop
+cr --release
+z rust
+mupdf LittleBookofRustMacros.pdf
+cr 
+cr
+cr --release
+zsc
+lsblk
+sudo mount /dev/sdb2 ~/mnt
+z ~/mnt
+Plugins/
+Cracks/
+grep Doctor
+grep "Doctor"
+rg "Doctor"
+ls
+ls | where name =~ 'doctor'
+ls | where name =~ 'plugin'
+ls | where name =~ 'Plugin'
+ls | where name =~ 'Doctor'
+mv `DDMF - Plugin Doctor v2.2.1.3.7z` PluginDoctor
+sudo mv `DDMF - Plugin Doctor v2.2.1.3.7z` PluginDoctor
+sudo mkdir trn
+ls
+cp *Newfangled* ./trn/
+ls | grep baby
+ls | grep Baby
+ls | where name =~ 'Baby"<\n>'
+ls | where name =~ 'Baby'
+ls | where name =~ 'BABY'
+cp `BABY Audio.7z` ./trn
+sudo cp `BABY Audio.7z` ./trn
+ls
+mv 'DMG Audio - All Plugins [10.2023].7z' DMGAudioallPlugins.7z
+sudo mv 'DMG Audio - All Plugins [10.2023].7z' DMGAudioallPlugins.7z
+sudo mv PluginDoctor PluginDoctor.7z
+mv `Synchro Arts - ReVoice Pro v5.0.17.1.7z` ReVoicePro.7z
+sudo mv `Synchro Arts - ReVoice Pro v5.0.17.1.7z` ReVoicePro.7z
+sudo cp ReVoicePro.7z ./trn
+sudo cp Sonible.7z
+sudo cp Sonible.7z ./trn
+sudo mv 'CableGuys - Plugin Bundle VST x64 (NO INSTALL, SymLink Installer) [2022.11.29].exe' CableGuysBundle.7z
+sudo cp CableGuysBundle.7z trn
+sudo cp Soundtoys.7z trn
+sudo cp 'TBProAudio - Plugins Bundle [03.2023].7z' trn
+sudo cp `TDR 28.01.2018 NO INSTALL.7z` trn
+zsc
+ls
+sysus
+dl trn/
+sysus
+z cs/cpp
+z cs
+cpp/
+mupdf `D. S. Malik - C++ Programming_ From Problem Analysis to Program Design, 5th-Course Technology (2010).pdf`
+removespace
+ls
+mupdf `D.S.Malik-C++Programming_FromProblemAnalysistoProgramDesign,5th-CourseTechnology(2010).pdf`
+mv `D.S.Malik-C++Programming_FromProblemAnalysistoProgramDesign,5th-CourseTechnology(2010).pdf` FromProblemAnalysisToProgramDesign.pdf
+mupdf FromProblemAnalysisToProgramDesign.pdf
+mv `BjarneStroustrup-TheC++ProgrammingLanguage-Addison-WesleyProfessional(2000).pdf` BjarneStroustrupBookCppBook.pdf
+mupdf BjarneStroustrupBookCppBook.pdf
+mv `MarcGregoire-ProfessionalC++-Wrox(2014).pdf` ProfessionalCpp.pdf
+sysus
+yay -Ss fastfetch
+yay -Ss neofetch
+yay -Ss fastfetch
+yaya -S fastfetch
+yay -S fastfetch
+fastfetch
+z plugins
+nvim
+~
+fzf
+nvim usr/src/qmk/util/uf2conv.py
+z plugins
+nvim
+nvim usr/src/qmk/util/uf2conv.py
+nvim ~/usr/src/qmk/util/uf2conv.py
+nvim
+nvim ~/usr/src/qmk/util/uf2conv.py
+nvium
+sysus
+yay -Ss juce
+yay -S juce
+z dev
+mkdir juce
+juce/
+cr
+nvim
+nvim
+sysus
+reboot
+sysus
+z aoc
+dl "'"
+ls
+cr
+z plu
+nvim
+cr
+nvim
+src/
+nano fifteen/five.rs
+nvim
+../
+nvim
+nano src/fifteen/five.rs
+nvim
+cr
+yazi
+cr
+zsh
+cargo run --release
+cr
+cargo run --release
+cr --release
+nvim
+sysus
+cr
+z nvim
+nvim
+nvim
+cr
+btop
+cr --release
+cr
+--- Day 7: Some Assembly Required ---<\n><\n>This year, Santa brought little Bobby Tables a set of wires and bitwise logic gates! Unfortunately, little Bobby is a little under the recommended age range, and he needs help assembling the circuit.<\n><\n>Each wire has an identifier (some lowercase letters) and can carry a 16-bit signal (a number from 0 to 65535). A signal is provided to each wire by a gate, another wire, or some specific value. Each wire can only get a signal from one source, but can provide its signal to multiple destinations. A gate provides no signal until all of its inputs have a signal.<\n><\n>The included instructions booklet describes how to connect the parts together: x AND y -> z means to connect wires x and y to an AND gate, and then connect its output to wire z.<\n><\n>For example:<\n><\n>    123 -> x means that the signal 123 is provided to wire x.<\n>    x AND y -> z means that the bitwise AND of wire x and wire y is provided to wire z.<\n>    p LSHIFT 2 -> q means that the value from wire p is left-shifted by 2 and then provided to wire q.<\n>    NOT e -> f means that the bitwise complement of the value from wire e is provided to wire f.<\n><\n>Other possible gates include OR (bitwise OR) and RSHIFT (right-shift). If, for some reason, you'd like to emulate the circuit instead, almost all programming languages (for example, C, JavaScript, or Python) provide operators for these gates.<\n><\n>For example, here is a simple circuit:<\n><\n>123 -> x<\n>456 -> y<\n>x AND y -> d<\n>x OR y -> e<\n>x LSHIFT 2 -> f<\n>y RSHIFT 2 -> g<\n>NOT x -> h<\n>NOT y -> i<\n><\n>After it is run, these are the signals on the wires:<\n><\n>d: 72<\n>e: 507<\n>f: 492<\n>g: 114<\n>h: 65412<\n>i: 65079<\n>x: 123<\n>y: 456<\n><\n>In little Bobby's kit's instructions booklet (provided as your puzzle input), what signal is ultimately provided to wire a?<\n>--- Day 7: Some Assembly Required ---<\n><\n>This year, Santa brought little Bobby Tables a set of wires and bitwise logic gates! Unfortunately, little Bobby is a little under the recommended age range, and he needs help assembling the circuit.<\n><\n>Each wire has an identifier (some lowercase letters) and can carry a 16-bit signal (a number from 0 to 65535). A signal is provided to each wire by a gate, another wire, or some specific value. Each wire can only get a signal from one source, but can provide its signal to multiple destinations. A gate provides no signal until all of its inputs have a signal.<\n><\n>The included instructions booklet describes how to connect the parts together: x AND y -> z means to connect wires x and y to an AND gate, and then connect its output to wire z.<\n><\n>For example:<\n><\n>    123 -> x means that the signal 123 is provided to wire x.<\n>    x AND y -> z means that the bitwise AND of wire x and wire y is provided to wire z.<\n>    p LSHIFT 2 -> q means that the value from wire p is left-shifted by 2 and then provided to wire q.<\n>    NOT e -> f means that the bitwise complement of the value from wire e is provided to wire f.<\n><\n>Other possible gates include OR (bitwise OR) and RSHIFT (right-shift). If, for some reason, you'd like to emulate the circuit instead, almost all programming languages (for example, C, JavaScript, or Python) provide operators for these gates.<\n><\n>For example, here is a simple circuit:<\n><\n>123 -> x<\n>456 -> y<\n>x AND y -> d<\n>x OR y -> e<\n>x LSHIFT 2 -> f<\n>y RSHIFT 2 -> g<\n>NOT x -> h<\n>NOT y -> i<\n><\n>After it is run, these are the signals on the wires:<\n><\n>d: 72<\n>e: 507<\n>f: 492<\n>g: 114<\n>h: 65412<\n>i: 65079<\n>x: 123<\n>y: 456<\n><\n>In little Bobby's kit's instructions booklet (provided as your puzzle input), what signal is ultimately provided to wire a?<\n>
+cr
+operators
+cr
+cr >> out.txt
+cr x> out.txt
+cr | save out.txt
+nvim out.txt
+cr
+cr --release
+nvim out.txt
+cr
+14146 | bits shr --n 16
+14146 | bits shr --number-bytes 16
+bits shr --number-bytes 16 14146
+cr
+cr --release
+btop
+cr --release
+nvim
+sysus
+applygnupgdefaults sysus
+sysus
+z juce
+ls
+gcgh juce-framework/JUCE
+yay
+reboot
+sysus
+./mnt
+ls
+../
+lsblk
+mount sdb2 mnt
+sudo mount sdb2 mnt
+sudo mount dev/sdb2 mnt
+sudo mount dev/sdb/sdb2 mnt
+ls mnht
+ls mnt
+sudo mount /dev/sdb/sdb2 mnt
+sudo mount /dev/sdb2 mnt
+mnt/
+Plugins/
+ls
+Cracks
+Cracks/
+z aoc
+nvim
+z aoc
+cr
+sysus
+z xplr
+nvimp
+nvim
+z we
+nvim
+z .config/wezterm
+nvim
+nvim
+cr
+nvim
+cr
+cargo test
+cargo test t1
+cargo test
+sysus
+z meta
+mv `Robert Nystrom - Crafting Interpreters-Genever Benning (2021).pdf` CraftingInterpreters.pdf
+mupdf CraftingInterpreters.pdf
+z func
+cr
+cargo test
+cr
+cargo test
+cr
+cargo test
+cr
+sysus
+yay
+reboot
+w   rrrrrrrrrrrrrrrrrr
+shutdown
+poweroff
+sysus
+z aoc
+dev/linux
+dev/linux/
+dev/
+ls
+cd/
+ls
+../
+dl ./cd/
+ls comp
+ls comp/
+comp/
+../
+dl ./comp/
+ls patina
+mkdir linux/jack
+linux/jack/
+gcgh jackaudio/jack1
+gcgh jackaudio/jack2
+jack1
+jack1/
+tokei
+../jack2
+tokei
+../jack1
+../jack2
+nvim
+dev/
+vst/
+nih-plug/
+nvim
+./
+../
+gcgh vizia/vizia
+vizia
+vizia/
+nvim
+z nih
+nvim
+z viz
+cr --example multiwindow
+cr --release --example multiwindow
+yay -Qs ninja
+yay -S ninja
+cr --release --example multiwindow
+/usr/include/freetype2/config
+/usr/include/freetype2/config/
+/usr/include/freetype2
+freetype/
+config/
+nvim
+sudo nvim
+sudoedit .
+sudoedit ftoption.h
+z plu
+nvim
+z plugins
+nvim
+z nvim/lua/plugins
+nvim
+z nih
+nvim
+sysus
+nvim
+z juce/
+z juce
+juce/
+JUCE/
+nvim
+nvim
+extras/AudioPluginHost/
+cmake
+cmake --build
+cmake --build .
+yay -S alsa-lib-devel libcurl-devel libX webkit2gtk
+make
+ls
+cmake
+nvim
+cmake . -B cmake-build
+make
+cmake
+cmake .
+cmake -B build -S .
+cmake --build build
+../../
+git pull
+lazygit
+git pull
+extras/AudioPluginHost/
+cmake-build/
+../
+cmake -B build
+---_
+fuck
+tf
+ls
+sysus
+reboot
+z soc
+z vizia
+sysus
+nvim
+ls
+fzf
+examples/
+ls
+z nvim/lua/plugins
+nvim
+nvim
+nvim
+z aoc
+nvim
+z soc
+nvim
+z nih
+cargo xtask bundle spectral_compressor --release
+lazygit
+cargo xtask bundle spectral_compressor --release
+lazygit
+nvim
+cargo xtask bundle spectral_compressor --release
+reboot
+z nih
+sysus
+nvim
+z soc
+lazygit
+z nih
+man gnuplot
+yay -Ss gnuplot
+yay -S gnuplot
+yay
+btop
+yay
+reboot
+z nih
+cargo xtask bundle spectral_compressor --release
+lazygit
+cargo xtask bundle spectral_compressor --release
+rustup
+rustup update
+cargo xtask bundle spectral_compressor --release
+z bhs
+nvim
+yay -S gnuplot
+gnuplot
+z dev
+mkdir audio
+audio/
+cargo new lossy
+nvim
+lossy/
+nvim
+z aoc
+nvim
+z audio
+z ref/audio
+mupdf `Håkan_Blomqvist_-_Audio_Programming_in_C++._The_Beginner_Level-leanpub.com_(2022).pdf`
+z lossy
+cr
+z ref/audio
+cr
+ls
+ln -s ./target/debug/lossy ./lossy
+ls
+./lossy
+man gnuplot
+gnuplot -h
+gnuplot --help
+gnuplot 3,4,9,5
+cr
+man gnuplot
+z ref/audio
+cr
+nvim
+z .config/i3
+nvim
+yay -Ss linux-wallpaper-engine
+yay -Ss linux-wallpaperengine
+yay -Ss GLEW
+yay -S linux-wallpaperengine-git
+nvim
+btop
+.local/share/steam
+.local/share/steam/
+.local/share
+Steam/
+linux-wallpaperengine 2983446997
+btop
+clifm
+btop
+linux-wallpaperengine 2983446997
+../fontconfig/
+nvim
+ls
+nvim
+../
+dl fontconfig
+z Steam
+steamapps
+steamapps/
+common/
+wallpaper_engine/
+nvim
+yazi
+linux-wallpaperengine 2983446997
+../../workshop
+content/
+431960/
+2983446997/
+linux-wallpaperengine 2981249186
+xrandr
+/
+xrandr
+linux-wallpaperengine --screen-root DP-2 --screen-root DP-3 2981249186
+btop
+linux-wallpaperengine --screen-root DP-2 --screen-root DP-3 2981249186
+linux-wallpaperengine --screen-root DP-2 2981249186
+zsh
+exit
+linux-wallpaperengine --screen-root DP-2 2981249186
+echo $XDG_SESSION_TYPE
+echo $env.XDG_SESSION_TYPE
+$env.XDG_SESSION_TYPE = x11
+$env.XDG_SESSION_TYPE = "x11"
+linux-wallpaperengine --screen-root DP-2 2981249186
+linux-wallpaperengine --screen-root DP-3 2981249186
+linux-wallpaperengine --screen-root DP-3 --screen-root DP-2 2981249186
+man linux-wallpaperengine
+linux-wallpaperengine --help
+jkjjlkj
+linux-wallpaperengine 2981249186
+linux-wallpaperengine --scaling stretch 2981249186
+linux-wallpaperengine --scaling stretch --screen-root DP-3 --screen-root DP-2 2981249186
+reboot
+nvim .xinitrc
+linux-wallpaperengine --screen-root DP-3 1568642013
+nvim .xinitrc
+z wez
+nvim
+z .config/wezterm
+nvim
+~
+nvim .xinitrc
+z soc
+z nih
+z aoc
+z soc
+z nih
+nvim
+nvim
+z audio/lossy
+nvim
+yay -Ss halogen
+z lossy
+nvim
+z bhs
+nvim
+nvim
+z qmk
+z ~/qmk
+z ~/dev/qmk
+~
+fzf
+z src/qmk
+z ~/src/qmk
+z ~/src/
+ls
+../
+fzf
+ls usr/src
+ls usr/src/qmk
+z usr/src/qmk
+z keyboards/crkbd/keymaps/rydwxz/
+nvim
+nano keymap.c
+;nvim --clean
+nvim --clean keymap.c
+z qmk
+q rydwxz
+z Rydwxz
+nvim --clean keymap.c
+z plugins
+sysus
+z b
+z nih
+nvim
+nvim
+z vizia
+nvim
+z bhs
+nvim
+cargo xtask bundle --release
+cargo xtask bundle soc --release
+cargo install --git https://github.com/robbert-vdh/nih-plug.git cargo-nih-plug
+cargo nih-plug bundle soc --release
+cargo update
+cargo nih-plug bundle soc --release
+yay -Ss linux-studio-plugins
+yay -Ss studio plugins
+sysus
+z vi
+cargo nih-plug bundle soc --release
+z ref/audio
+sysus
+reboot
+z ref/audio
+sysus
+z soc
+git push
+lazygit
+.config/nvim/
+z ni
+cargo xtask bundle diopser --release
+sysus
+lsblk
+sudo mount /dev/sdc1 ~/mnt
+z mnt
+sudo umount mnt
+../
+sudo umount ./mnt
+ls mnt
+mkdir mnt/drv mnt/usb
+ls mnt
+mnt
+mnt/
+sudo mount /dev/sdc1 usb
+sudo mount /dev/sdb2 drv
+drv/Plugins/Cracks
+drv/Plugins/Cracks/
+cp PluginAlliance ../usb
+cp -r PluginAlliance ../usb
+sudo cp -r PluginAlliance ../usb
+mnt/
+ls usb
+ls drv
+drv/Plugins
+Plugins/
+drv/Plugins/
+usb/
+../
+dl usb
+sudo dl usb
+rm -rf usb
+sudo rm -rf usb
+ls
+Cracks
+Cracks/
+z ref/
+../
+sound
+sound/
+mupdf `Alton F. Everest - The master handbook of acoustics-McGraw-Hill Companies (2002).pdf` & 
+sysus
+z dev
+mkdir halogen
+halogen/
+../
+dl halogen
+cargo new halogen
+yay -Ss halogen
+halogen/
+cargo add vizia
+z vizia
+z doc/r
+../
+mkdir rea
+lsblk
+sudo mount /dev/sdb2 ~/mnt/drv
+sudo cp ~/mnt/drv/ReaProjects/PSFF/cinematicbrass.scifistrings.loop.105bpm.wav ~/dev/halogen/loop.wav
+nvim
+ls
+nvim
+../
+halogen/
+nvim 
+../
+audio/
+cargo new --lib pelican
+../
+mv patina audio/
+mv halogen audio/
+audio/
+halogen/
+z doc/ref/cs/rust
+../
+nvim
+cargo run
+z auduio
+z audio
+z dev/audio
+gcgh MeadowlarkDAW/creek
+tokei
+creek/
+tokei
+nvim
+../
+cr --release --example widget_gallery
+cr --release --example widget_gallery | grep widget
+cr --release --example widget_gallery | grep "widget"
+ls
+../
+vizia
+vizia/
+z dev/vst/vizia
+cr --release --example animation
+cr --release --example cursor_icon
+z soc
+z bhs
+nvim
+nvim
+cargo nih-plug bundle soc --release
+z soc
+cargo nih-plug bundle soc --release
+ln -s ~/.vst3 ./target/bundled/soc.vst3
+ls ~/.vst3
+cargo nih-plug bundle soc --release
+ls target/bundled
+cargo nih-plug bundle soc --release
+ls target/bundled
+ls target/bundled/soc.vst3
+dl target/bundled
+cargo nih-plug bundle soc --release
+ls target/bundled
+cargo nih-plug bundle soc --release
+ls target/bundled
+nvim
+sysus
+z xmonad
+fzf
+yay -Ss hyprland
+dev/
+mkdir ext
+ext/
+gcgh pop-os/cosmic-comp
+cosmic-comp/
+nvim
+tokei
+nvim
+cargo nih-plug bundle soc --release
+dl target/bundled
+cargo nih-plug bundle soc --release
+dl target/bundled
+cargo nih-plug bundle soc --release
+dl target/bundled
+cargo nih-plug bundle soc --release
+dl target/bundled
+cargo nih-plug bundle soc --release
+dl target/bundled
+cargo nih-plug bundle soc --release
+dl target/bundled
+cargo nih-plug bundle soc --release
+z halogen
+cr
+cargo nih-plug bundle soc --release
+nvim
+cargo nih-plug bundle soc --release
+z nih-plug
+z Down
+7z 'MicDriver_[GuitarAmigo].zip'
+man 7z
+yay -Ss 7z
+yay -Ss 7zip
+yay -S p7zip
+7z -e 'MicDriver_[GuitarAmigo].zip'
+7z e 'MicDriver_[GuitarAmigo].zip'
+ls
+dl 'MicDriver_[GuitarAmigo].zip'
+mv 'MicDriver_[GuitarAmigo].jsfx' ~/dev/vst
+z vst
+cargo new md
+mv 'MicDriver_[GuitarAmigo].jsfx' md
+mc/
+md/
+ls mnt
+ls mnt/drv
+ls mnt/drv/Plugins/VST
+sysus
+yay -Qs vlc
+z halogen
+cr
+sysus
+cr
+yay -Ss qemu-full
+yay -Qs qemu-full
+yay -S qemu-full
+nvim
+nvim
+yay
+nvim
+reboot
+yay -S qemu-base
+yay -Rns qemu-base
+LC_ALL=C.UTF-8 lscpu | grep Virtualization
+zgrep CONFIG_KVM= /proc/config.gz
+lsmod | grep kvm
+yay -Ss kvmgt
+zgrep VIRTIO /proc/config.gz
+z halogen
+cr
+z vizia
+../
+ext/
+gcgh perlindgren/vizia_file_dialog
+vizia_file_dialog/
+cr
+'lsmod | grep virtio<\n>'
+lsmod | grep virtio
+modprobe virtio
+lsmod | grep virtio
+lsmod
+man modprobe
+sudo modprobe virtio
+lsmod | grep virtio
+ls /usr/lib/modules/ | grep virtio
+ls /usr/lib/modules/ 
+ls /usr/lib/modules/6.12.1-zen1-1-zen/ | grep virtio
+ls /usr/lib/modules/6.12.1-zen1-1-zen/ 
+yay -Ss virtio
+modprobe virtio
+yay -S qemu-base
+sudo gpasswd -a rw kvm
+sudo gpasswd -a rw libvirt
+modprobe virtio
+lsmod | grep virtio
+sudo modprobe virtio
+lsmod | grep virtio
+lsmod | grep kvm
+lsblk
+sudo umount /dev/sda*
+groups
+sudo usermod -aG kvm rw
+groups
+yay -S virt-manager
+yay -S libvirt
+sudo usermod -aG libvirt rw
+groups
+grouops
+groups
+sudo systemctl status libvirtd
+sudo systemctl enable libvirtd
+sudo systemctl start libvirtd
+sudo systemctl status libvirtd
+man dd
+ls
+usr/
+mkdir kvm
+kvm/
+dd if=/dev/zero of=efi1 bs=1M count=100
+ls
+dd if=/dev/zero of=efi2 bs=1M count=1
+mkdir w10
+mv efi1 w10/
+mv efi2 w10/
+w10/
+sudo losetup -f efi1
+sudo losetup -f efi2
+losetup -a
+lsblk
+sudo mdadm --build --verbose /dev/md0 --chunk=512 --level=linear --raid-devices=3 /dev/loop0 /dev/sda4 /dev/loop1
+lsblk
+ls /dev | grep md
+ls /dev/ | grep md
+ls /dev/ 
+dmesg
+sudo dmesg
+sysus
+z soc
+lazygit
+z soc
+z halogen
+lazygit
+z soc
+z bhs
+nvim
+nvim
+z halogen
+nvim
+z soc
+z nih-plug
+sysus
+nvim
+nvim
+z vst
+md/
+ls src
+lazygit
+nvim
+lazygit
+nvim
+sysus
+reboot
+ls
+sysus
+z .local/share/Steam
+yazi
+xplr
+z RiftWizard2
+z `steamapps/common/Rift Wizard 2/`
+RiftWizard2/
+tokei
+z nvim/
+z plugins
+nvim
+.local/share/nvim
+~/.local/share/nvim
+mason/
+bin/
+../
+yazi
+nvim
+z RiftWizard2
+z plugins
+z md
+z soc
+nvim
+cargo add nih-plug
+cargo add nih_plug
+z soc
+nvim
+z nih-plug
+z md
+.local/share
+../
+.config/reaper
+.config
+REAPER/
+z md
+cp 'MicDriver_[GuitarAmigo].jsfx' ~/.config/REAPER/Effects/
+nvim
+nvim
+nvim
+nvim
+nvim
+reboot
+z dev/ext
+gcgh jtackaberry/reaticulate
+tokei
+q
+ls
+reaticulate/
+tokei
+nvim
+reboot
+yay -Ss chromium
+yay -S chromium
+yay -Ss wine-staging yabridge
+yay -S wine-staging yabridge
+env WINEPREFIX=~/.customprefix wineboot -u
+winecfg
+lsblk
+sudo mount /dev/sdb2 ~/mnt/drv
+ls usb
+dl ./usb/
+ls mnt/drv/Plugins/VST
+ls .wine
+.wine/drive_c
+sudo cp mnt/drv/Plugins/Vst/ .wine/drive_c/
+sudo cp -r mnt/drv/Plugins/Vst/ .wine/drive_c/
+ls
+dl Vst/
+rm -rf ./Vst
+sudo rm -rf ./Vst
+mkdir vst
+sudo cp -r `mnt/drv/Plugins/VST/TDR 28.01.2018 NO INSTALL/` .wine/drive_c/vst/TDR
+ls vst
+yabridgectl add ./vst
+yabridgectl add "$HOME/.wine/drive_c/vst"
+yay
+reboot
+yabridgectl add "$HOME/.wine/drive_c/vst"
+yay -Ss yabridgectl
+yay -S yabridgectl
+yabridgectl add "$HOME/.wine/drive_c/vst"
+ls .wine
+ls .wine/drive_c/vst
+yabridgectl add ~/.wine/drive_c/vst
+yabridgectl sync
+mnt/drv/plugins/cracks
+mnt/drv/plugins/cracks/
+mnt/drv/Plugins/Cracks/
+mnt/drv/
+Plugins/Cracks
+Plugins/cracks
+Plugins/
+ls
+../
+lsblk
+sudo mount /dev/sdb2 ./drv
+drv/Plugins/Cracks
+drv/Plugins/Cracks/
+`TDR 28.01.2018 NO INSTALL/`
+../
+VST/
+`TDR 28.01.2018 NO INSTALL/`
+nvim `TDR 28.01.2018 NO INSTALL.txt`
+yazi
+btop
+xrandr
+man xrandr
+xrandr --output DP-3 --mode 5120x1440
+nvim .xinitrc
+z soc
+nvim
+sysus
+nvim
+z lossy
+z ref/audio
+reboot
+nvim .xinitrc
+reboot
+.config

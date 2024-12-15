@@ -45,7 +45,7 @@ impbuf=256*1024;
         file_mem(filehandle,impbuf,impbuf_l*impbuf_nch);
       );
       file_close(filehandle);
-    );
+    ) : lslider1 = -1;
   );
   !stereo_mode != !slider4 ? ( need_refft=1; stereo_mode=slider4; );
 
