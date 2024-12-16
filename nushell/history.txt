@@ -2226,3 +2226,6 @@ reboot
 nvim .xinitrc
 reboot
 .config
+lazygit
+nvim
+nvim nushell/
