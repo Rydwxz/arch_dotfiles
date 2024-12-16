@@ -2229,3 +2229,10 @@ reboot
 lazygit
 nvim
 nvim nushell/
+lazygit
+git status
+git push
+ls
+cp .zshrc .config
+cp .zprofile .config
+.config
