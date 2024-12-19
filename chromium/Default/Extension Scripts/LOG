@@ -1,2 +1,3 @@
-2024/12/09-18:36:41.201 2122 Creating DB /home/rw/.config/chromium/Default/Extension Scripts since it was missing.
-2024/12/09-18:36:41.214 2122 Reusing MANIFEST /home/rw/.config/chromium/Default/Extension Scripts/MANIFEST-000001
+2024/12/17-18:23:42.882 32623 Reusing MANIFEST /home/rw/.config/chromium/Default/Extension Scripts/MANIFEST-000001
+2024/12/17-18:23:42.882 32623 Recovering log #3
+2024/12/17-18:23:42.884 32623 Reusing old log /home/rw/.config/chromium/Default/Extension Scripts/000003.log 

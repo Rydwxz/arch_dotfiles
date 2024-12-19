@@ -5,6 +5,7 @@ alias e = enter
 alias x = dexit
 alias o = overlay
 alias cr = cargo run
+alias crr = cargo run --release
 alias ca = cargo add
 
 (

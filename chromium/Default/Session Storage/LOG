@@ -1,18 +1,6 @@
-2024/12/10-20:10:19.864 4 Reusing MANIFEST /home/rw/.config/chromium/Default/Session Storage/MANIFEST-000001
-2024/12/10-20:10:19.864 4 Recovering log #66
-2024/12/10-20:10:19.865 4 Reusing old log /home/rw/.config/chromium/Default/Session Storage/000066.log 
-2024/12/10-21:00:11.367 5 Level-0 table #70: started
-2024/12/10-21:00:11.373 5 Level-0 table #70: 36623 bytes OK
-2024/12/10-21:00:11.380 5 Delete type=0 #66
-2024/12/10-23:23:40.149 5 Level-0 table #72: started
-2024/12/10-23:23:40.155 5 Level-0 table #72: 31159 bytes OK
-2024/12/10-23:23:40.164 5 Delete type=0 #69
-2024/12/10-23:23:40.166 5 Compacting 4@0 + 1@1 files
-2024/12/10-23:23:40.172 5 Generated table #73@0: 336 keys, 11474 bytes
-2024/12/10-23:23:40.172 5 Compacted 4@0 + 1@1 files => 11474 bytes
-2024/12/10-23:23:40.176 5 compacted to: files[ 0 1 1 0 0 0 0 ]
-2024/12/10-23:23:40.178 5 Delete type=2 #61
-2024/12/10-23:23:40.178 5 Delete type=2 #72
-2024/12/10-23:23:40.178 5 Delete type=2 #70
-2024/12/10-23:23:40.178 5 Delete type=2 #67
-2024/12/10-23:23:40.179 5 Delete type=2 #64
+2024/12/17-18:22:15.378 4 Reusing MANIFEST /home/rw/.config/chromium/Default/Session Storage/MANIFEST-000001
+2024/12/17-18:22:15.379 4 Recovering log #71
+2024/12/17-18:22:15.380 4 Reusing old log /home/rw/.config/chromium/Default/Session Storage/000071.log 
+2024/12/17-18:22:17.053 5 Level-0 table #76: started
+2024/12/17-18:22:17.057 5 Level-0 table #76: 31314 bytes OK
+2024/12/17-18:22:17.062 5 Delete type=0 #71

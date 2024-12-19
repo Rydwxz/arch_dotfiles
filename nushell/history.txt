@@ -2236,3 +2236,140 @@ ls
 cp .zshrc .config
 cp .zprofile .config
 .config
+lazygit
+reboot
+z dev/ext
+gcgh iced-rs/iced
+iced/examples
+iced/
+z dev/ext
+iced/examples/
+tour/
+cargo run
+cr --package game_of_life
+sysus
+z nushell
+nvim
+z halogen
+crr
+yazi
+sudo mount /dev/sdb2 mnt/drv
+mnt/drv/Plugins/Cracks/
+'FabFilter - Total Bundle v2024.12.11 [R2R]/'
+yazi
+cp 'FabFilter - Total Bundle v2024.12.11 [R2R]/' ~/.wine/drive_c/vst
+cp -r 'FabFilter - Total Bundle v2024.12.11 [R2R]/' ~/.wine/drive_c/vst
+~/.wine/drive_c
+vst/
+mv 'FabFilter - Total Bundle v2024.12.11 [R2R]/' FabFilter
+FabFilter/
+wine `Setup Total Bundle v2024.12.11.exe`
+yazi
+~/mnt/drv/Plugins/Cracks
+7z e `FabFilter - Total Bundle v2024.02.15.7z`
+sudo 7z e `FabFilter - Total Bundle v2024.02.15.7z`
+ls
+../
+rm -rf FabFilter/
+cp -r `FabFilter - Total Bundle v2024.02.15/` ~/.wine/drive_c/vst/
+ls
+mv `FabFilter - Total Bundle v2024.02.15/` FF
+FF/
+ls
+../
+ls `FabFilter - Total Bundle v2024.02.15/`
+sysus
+Downloads/
+7z e Bricasti_M7_Fusion_IRs-96_kHz.zip
+yazi
+Bricasti_M7_Fusion_IRs-96_kHz/
+ls
+../
+yazi
+../
+gcgh B0ney/xmodits
+xmodits/
+ls
+7z e DMGAudioallPlugins.7z ~/.wine/drive_c/vst/
+ls
+ls
+../
+7z e DMGAudioallPlugins.7z 
+cp DMGAudioallPlugins.7z ~/.wine/drive_c/vst
+vst
+vst/
+7z e DMGAudioallPlugins.7z 
+ls
+yazi
+wine `Setup Total Bundle v2024.12.11.exe`
+wine `Setup-DMG Audio v2023.10.30.exe`
+mkdir dmg
+wine `Setup-DMG Audio v2023.10.30.exe`
+ls dmg
+yay -S chromium
+mnt/drv/Plugins/Cracks/
+mkdir NoiseAsh
+mnt/drv/Plugins/Cracks/
+mkdir NoiseAsh
+sudo mkdir NoiseAsh
+s
+ls
+mnt/
+drvPlugins/
+Cracks/
+../
+Plugins/
+Cracks/
+mv 'Plugin Alliance - MEGA Bundle Effects [12.2024] -REPACK/' PAMegaBundle12.24repack
+../
+mv Plugins/Cracks/PAMegaBundle12.24repack/ drv/Plugins/Cracks
+sudo mv Plugins/Cracks/PAMegaBundle12.24repack/ drv/Plugins/Cracks
+ls
+ls Plugins/Cracks
+rm -rf Plugins
+ls
+rm -rf drvPlugins/
+drv/Plugins/Cracks/
+z Cracks
+mkdir PulsarModular
+sudo mkdir PulsarModular
+nvim
+../
+iced/examples/
+nvim
+cargo run --release --example todos
+crr --package todos
+z nushell
+nvim
+crr --package todos
+sysus
+../
+xmodits/
+z Downloads/
+sudo mv `Cole Ritter - Fast Car Slow (145 BPM).zip` ~/mnt/drv/Recordings
+z mnt/drv/
+ls
+../
+Recordings/
+z mnt/drv/Recordings
+Audio
+Audio/
+sysus
+nvim
+nvim
+nvim
+reboot
+Downloads/
+..
+tmp/
+yazi
+xplr
+sudo mount /dev/sdb2 mnt/drv
+sudo mount /dev/sdb2 ~/mnt/drv
+ls ~/mnt/drv
+xplr
+ls
+sudo mv ./NoiseAsh/ ~/mnt/drv/Plugins/Cracks
+sudo mv ./schem ~/mnt/drv/Schematics
+xplr
+~/.config
