@@ -2373,3 +2373,16 @@ sudo mv ./NoiseAsh/ ~/mnt/drv/Plugins/Cracks
 sudo mv ./schem ~/mnt/drv/Schematics
 xplr
 ~/.config
+cp .zshrc .config
+cp .zprofile .config
+.config/nushell/
+nu_scripts/
+xplr
+../
+freaky-cherrynu/
+cp ../freaky-cherry
+cp freaky-cherry.nu ../freaky-cherry
+../
+dl freaky-cherrynu
+mv freaky-cherry freaky-cherry.nu
+nvim

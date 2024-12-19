@@ -928,7 +928,7 @@ $env.config = {
 # source ~/.config/nushell/nu_scripts/themes/nu-themes/spaceduck.nu
 # source ~/.config/nushell/nu_scripts/themes/nu-themes/symphonic.nu
 # source ~/.config/nushell/nu_scripts/themes/nu-themes/wild-cherry.nu
-source ~/.config/nushell/nu_scripts/themes/nu-themes/freaky-cherry.nu
+source ~/.config/nushell/freaky-cherry.nu
 # source ~/.config/nushell/nu_scripts/themes/nu-themes/yachiyo.nu
 
 use ~/.cache/starship/init.nu
